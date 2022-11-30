@@ -51,10 +51,10 @@ const Nav = () => {
             </DelayedLink>
           </li>
 
-          <li id="homeLi" style={{zIndex: 3}} onClick={onClickClass} className={clicked === "homeLi" ? styles.liClickedHome : styles.liHover}>
-          <DelayedLink delay={600} to='#home' id="home">
-            Home
-          </DelayedLink>  
+          <li id="contactLi" style={{zIndex: 3}} onClick={onClickClass} className={clicked === "contactLi" ? styles.liClickedContact : styles.liHover}>
+            <DelayedLink delay={600} to='#contact' id="contact">
+              Contato
+            </DelayedLink>  
           </li>
 
           <li id="projectsLi" style={{zIndex: 2}} onClick={onClickClass} className={clicked === "projectsLi" ? styles.liClickedProjects : styles.liHover}>

@@ -6,6 +6,7 @@ import Hire from "../Hire/Hire";
 import Nav from "./Nav";
 import Projects from "../Projects/Projects";
 import RedeSocial from "../Social/RedeSocial";
+import Contact from "../Contact/Contact";
 
 export const Main = () => {
   useEffect(() => {
@@ -28,7 +29,7 @@ export const Main = () => {
       </div>
       <div className={styles.snapScroll}>
         <section id="contact">
-          <h1>Page Four</h1>
+          <Contact />
         </section>
         <section id="projects2" className="projects">
           <Projects />
