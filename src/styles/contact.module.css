@@ -15,6 +15,12 @@
   color: rgb(250, 254, 255);
 }
 
+.formContainer span {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #b5daff;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -49,7 +55,7 @@
 }
 
 .form input,
-textarea {
+.form textarea {
   text-indent: 10px;
   background-color: #29303e;
   border: 1px solid #343b47;
@@ -72,11 +78,11 @@ textarea {
   font-size: 1.5rem;
 }
 
-.inputError {
+.form .inputError {
   border-color: rgb(253, 83, 83);
 }
 
-.error {
+.form .error {
   color: rgb(253, 83, 83);
 }
 
@@ -90,6 +96,7 @@ textarea {
   font-size: 1.4rem;
   transition: ease-in 200ms;
   margin-top: 40px;
+  cursor: pointer;
 }
 
 .submitContact:hover {
@@ -118,12 +125,13 @@ textarea {
   }
 
   .form textarea {
+    margin-top: 0px;
+  }
+
+  .form textarea {
     height: 200px;
   }
 
-  .form label {
-    font-size: 1.2rem;
-  }
 
   .form input::placeholder,
   .form textarea::placeholder {
@@ -178,16 +186,25 @@ textarea {
     width: 90vw;
   }
 
+  .formContainer span {
+    font-size: 1.2rem;
+    width: 90vw;
+    margin-bottom: 50px;
+    color: #b5daff;
+  }
+
   .form {
     width: 250px;
   }
 
   .form input {
     height: 40px;
+    margin: 5px 0px 20px 0px
   }
 
   .form textarea {
     height: 150px;
+    margin-top: 5px;
   }
 
   .form label {
