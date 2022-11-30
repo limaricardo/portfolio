@@ -31,14 +31,14 @@ const Curriculo = () => {
         <div className={styles.experiencesSection}>
           <Flipcard />
           <div className={styles.buttonsCurriculoDiv}>
-            <button onClick={() => setInfo(state => ({ ...initialState, aboutInfo: true }))}>Sobre mim</button>
-            <button onClick={() => setInfo(state => ({ ...initialState, professionalInfo: true }))}>
+            <button className={info.aboutInfo ? styles.infoSelected : ""} onClick={() => setInfo(state => ({ ...initialState, aboutInfo: true }))}>Sobre mim</button>
+            <button className={info.professionalInfo ? styles.infoSelected : ""} onClick={() => setInfo(state => ({ ...initialState, professionalInfo: true }))}>
               Experiência Profissional
             </button>
-            <button onClick={() => setInfo(state => ({ ...initialState, educationalInfo: true }))}>
+            <button className={info.educationalInfo ? styles.infoSelected : ""} onClick={() => setInfo(state => ({ ...initialState, educationalInfo: true }))}>
               Educação
             </button>
-            <button onClick={() => setInfo(state => ({ ...initialState, skillsInfo: true }))}>
+            <button className={info.skillsInfo ? styles.infoSelected : ""} onClick={() => setInfo(state => ({ ...initialState, skillsInfo: true }))}>
               Habilidades
             </button>
           </div>

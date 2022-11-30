@@ -79,7 +79,9 @@ p {
   margin: 0 auto;
 }
 
-.timelines h2, .aboutSection h2, .skills h2 {
+.timelines h2,
+.aboutSection h2,
+.skills h2 {
   text-align: center;
   color: rgb(221, 250, 255);
   font-weight: 600;
@@ -177,7 +179,6 @@ p {
   justify-content: space-between;
 }
 
-
 .aboutSection p {
   font-size: 1.2rem;
 }
@@ -193,7 +194,7 @@ p {
   justify-content: flex-start;
   text-align: left;
   width: 400px;
-  gap: 60px;
+  gap: 70px;
 }
 
 .skillsDiv p {
@@ -201,6 +202,13 @@ p {
   align-items: center;
   text-align: left;
   width: 30px;
+  font-size: 1rem;
+}
+
+.buttonsCurriculoDiv .infoSelected {
+  background-color: white;
+  color: #1e3d58;
+  font-weight: 800;
 }
 
 /* Screen under 1400 px */
