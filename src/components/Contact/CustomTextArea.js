@@ -2,13 +2,13 @@ import { useField } from "formik";
 import React from "react";
 import styles from "../../styles/contact.module.css";
 
-const CustomInput = ({ label, ...props }) => {
+const CustomTextArea = ({ label, ...props }) => {
   const [field, meta] = useField(props);
 
   return (
     <>
       <label>{label}</label>
-      <input
+      <textarea
         {...field}
         {...props}
         className={meta.touched && meta.error ? styles.inputError : ""}
@@ -18,4 +18,4 @@ const CustomInput = ({ label, ...props }) => {
   );
 };
 
-export default CustomInput;
+export default CustomTextArea;

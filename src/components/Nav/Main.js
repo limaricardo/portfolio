@@ -28,7 +28,7 @@ export const Main = () => {
         </section>
       </div>
       <div className={styles.snapScroll}>
-        <section id="contact">
+        <section id="contact" className="contact">
           <Contact />
         </section>
         <section id="projects2" className="projects">

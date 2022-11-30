@@ -102,7 +102,7 @@ body {
   transform: rotateX(-90deg);
 }
 
-input {
+.containerProjects input {
   height: 50px;
   width: 100px;
   background: transparent;
@@ -113,27 +113,27 @@ input {
   top: -100px;
 }
 
-input:focus~ .box #front {
+.containerProjects input:focus~ .box #front {
   transform: translateZ(180px) rotateY(360deg);
 } 
 
-input:focus~ .box #back {
+.containerProjects input:focus~ .box #back {
   transform: translateZ(-180px) rotateY(360deg) rotateX(180deg);
 } 
 
-input:focus~ .box #left {
+.containerProjects input:focus~ .box #left {
   right: 180px;
 } 
 
-input:focus~ .box #right {
+.containerProjects input:focus~ .box #right {
   left: 180px;
 } 
 
-input:focus~ .box #top {
+.containerProjects input:focus~ .box #top {
   bottom: 180px;
 } 
 
-input:focus~ .box #bottom {
+.containerProjects input:focus~ .box #bottom {
   top: 180px;
 } 
 
