@@ -12,7 +12,7 @@ h6 {
   width: 100vw;
   height: 100vh;
   background: radial-gradient(rgb(229, 240, 245), rgb(4, 111, 154));
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .curriculoContainer h1 {
@@ -33,6 +33,7 @@ h6 {
 .experiencesSection {
   display: flex;
   align-items: flex-start;
+  justify-content: flex-start;
   width: 100vw;
   height: 50vh;
   flex-wrap: wrap;
@@ -41,12 +42,12 @@ h6 {
 
 .experiencesDiv {
   display: flex;
-  width: 70vw;
 }
 
 .workExperiencesSection,
-.educationExperiences {
-  min-width: 420px;
+.educationExperiences, .experiencesDiv, .infoContainer {
+  width: 420px;
+  height: 100%;
 }
 
 .profile {
@@ -125,6 +126,22 @@ p {
   border-radius: 50%;
   background: #fff;
   margin-top: 20px;
+}
+
+.buttonsCurriculoDiv {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 400px;
+  justify-content: space-between;
+}
+
+.buttonsCurriculoDiv button {
+  width: 100%;
+  height: 70px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.4rem;
 }
 
 /* Screen under 1400 px */
