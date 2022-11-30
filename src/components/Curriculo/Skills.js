@@ -6,7 +6,7 @@ const Skills = () => {
     <div className={styles.skillSection}>
           <div className={styles.skills}>
             <div>
-            <span>Habilidades</span>
+              <h2>Habilidades</h2>
             </div>
             <div className={styles.skillsDiv}>
               <p><img src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png" alt="" />HTML</p>

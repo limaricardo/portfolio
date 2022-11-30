@@ -11,7 +11,7 @@ h6 {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(rgb(229, 240, 245), rgb(4, 111, 154));
+  background: radial-gradient(#1e3d58, rgb(0, 76, 106));
   overflow: hidden;
 }
 
@@ -32,12 +32,12 @@ h6 {
 
 .experiencesSection {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  width: 100vw;
+  width: 80vw;
   height: 50vh;
   flex-wrap: wrap;
-  margin-top: 35px;
+  margin-top: 120px;
 }
 
 .experiencesDiv {
@@ -45,9 +45,21 @@ h6 {
 }
 
 .workExperiencesSection,
-.educationExperiences, .experiencesDiv, .infoContainer {
-  width: 420px;
+.educationExperiences,
+.experiencesDiv {
+  width: 100%;
   height: 100%;
+}
+
+.infoContainer {
+  width: 600px;
+  height: 100%;
+  display: flex;
+  text-align: left;
+}
+
+.infoContainer h2 {
+  text-align: center;
 }
 
 .profile {
@@ -59,21 +71,24 @@ p {
   line-height: 26px;
   margin: 0;
 }
+
 .timelineContainer {
   width: 100%;
   padding: 0 10px;
   box-sizing: border-box;
   margin: 0 auto;
 }
-.timelines h2 {
+
+.timelines h2, .aboutSection h2, .skills h2 {
   text-align: center;
-  color: black;
+  color: rgb(221, 250, 255);
   font-weight: 600;
-  margin-bottom: 20px;
-  font-size: 1.6rem;
-  border: 1px solid white;
+  margin: -20px 0 20px 0;
+  font-size: 1.8rem;
+  border: none;
   border-radius: 20px;
 }
+
 .dFlex2 {
   display: flex;
   align-items: flex-start;
@@ -90,7 +105,7 @@ p {
   margin: auto;
   height: 100%;
   width: 2px;
-  background: #fff;
+  background: rgb(227, 223, 243);
   top: 20px;
 }
 .singleTimeline {
@@ -104,18 +119,18 @@ p {
   position: relative;
 }
 .timelineText h6 {
-  color: black;
+  color: rgb(255, 255, 255);
   font-weight: 900;
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
 }
 .timelineText span {
-  color: black;
+  color: rgb(255, 255, 255);
   display: block;
   width: 100%;
   margin-top: 15px;
   text-align: left;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 .tSquare {
   content: "";
@@ -124,7 +139,7 @@ p {
   height: 12px;
   left: -5px;
   border-radius: 50%;
-  background: #fff;
+  background: rgb(87, 217, 240);
   margin-top: 20px;
 }
 
@@ -134,14 +149,58 @@ p {
   height: 100%;
   width: 400px;
   justify-content: space-between;
+  position: relative;
+  left: -50px;
 }
 
 .buttonsCurriculoDiv button {
   width: 100%;
   height: 70px;
   border-radius: 10px;
-  border: none;
-  font-size: 1.4rem;
+  border: 3px solid white;
+  font-size: 1.5rem;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.buttonsCurriculoDiv button:hover {
+  background-color: white;
+  color: #1e3d58;
+  font-weight: 800;
+}
+
+.aboutSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.aboutSection p {
+  font-size: 1.2rem;
+}
+
+.skills img {
+  width: 20px;
+  height: 20px;
+}
+
+.skillsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-align: left;
+  width: 400px;
+  gap: 60px;
+}
+
+.skillsDiv p {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 30px;
 }
 
 /* Screen under 1400 px */
@@ -285,7 +344,7 @@ p {
   }
 
   .curriculoContainer h4 {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 
   .experiencesSection {
@@ -316,7 +375,7 @@ p {
     font-size: 0.9rem;
   }
   .timelineText span h6 {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .buttonsContainer {
