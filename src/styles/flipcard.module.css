@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
 .flipCardContainer {
   width: 300px;
   height: 450px;
@@ -25,7 +27,7 @@
 }
 
 .front {
-  background-image: url("https://i.imgur.com/FVtG3KN.png");
+  background-image: url("https://i.imgur.com/QrdvZIF.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -49,14 +51,24 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+}
+
+.front h2,
+.front h3 {
+  margin-top: 35px;
+}
+
+.front h3 {
+  color: #82cbff;
+  font-weight: 200;
+  font-family: "Poppins", sans-serif;
 }
 
 .buttonsContainer {
   display: flex;
   width: 100%;
   position: relative;
-  bottom: -30px;
+  bottom: -250px;
 }
 
 .aboutButton {
@@ -73,7 +85,7 @@
   border-bottom: 2px solid rgb(95, 95, 95);
   width: 100%;
   background-color: white;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   color: rgb(35, 35, 35);
 }
 
@@ -82,16 +94,18 @@
   border-radius: 50px;
   padding: 0px 10px;
   border: none;
-  background-color: #5bd485;
+  background-color: #007629;
   color: white;
   font-size: 1.1rem;
   text-align: center;
   transition: ease-in-out 0.2s;
   margin-bottom: 20px;
+  position: relative;
+  bottom: -250px;
 }
 
 .frontButton:hover {
-  background-color: #007629;
+  background-color: #5bd485;
   color: white;
 }
 
@@ -100,17 +114,17 @@
   border-radius: 50px;
   padding: 0px 10px;
   border: none;
-  background-color: #5bd485;
+  background-color: #007629;
   color: white;
   font-size: 1.1rem;
   text-align: center;
   transition: ease-in-out 0.2s;
   position: relative;
-  top: -215px;
+  bottom: -10px;
 }
 
 .backButton:hover {
-  background-color: #007629;
+  background-color: #5bd485;
   color: white;
 }
 
@@ -122,7 +136,7 @@
 .textContainer {
   height: 160px;
   position: relative;
-  bottom: -25px;
+  bottom: -240px;
   text-align: left;
   padding: 10px 30px;
 }
@@ -133,25 +147,18 @@
 }
 
 .iconImg {
-  width: 50px;
-  padding: 2px 5px;
+  width: 45px;
+  padding: 5px 5px;
 }
 
-@media only screen and (max-width: 1400px) {
-  .flipCardContainer {
-    width: 245px;
-    height: 370px;
-    perspective: 800px;
-    margin-top: 15px;
-  }
-
+@media only screen and (max-width: 1500px) {
   .aboutButton,
   .skillsButton {
     padding: 5px;
   }
 
   .buttonsContainer {
-    bottom: -60px;
+    bottom: -250px;
   }
 
   .backButton {
@@ -159,7 +166,7 @@
   }
 
   .textContainer {
-    bottom: -50px;
+    bottom: -245px;
     padding: 10px 35px;
   }
 
@@ -171,49 +178,16 @@
     width: 40px;
     padding: 2px 5px;
   }
-}
-
-@media screen and (max-width: 600px) {
-  .aboutButton,
-  .skillsButton {
-    padding: 5px;
-  }
-
-  .buttonsContainer {
-    bottom: -65px;
-  }
 
   .backButton {
-    top: -165px;
-    font-size: 0.7rem;
-    padding: 5px 10px;
-    height: 25px;
-  }
-
-  .textContainer {
-    bottom: -60px;
-    padding: 5px 30px;
-  }
-
-  .textContainer p {
-    font-size: 0.6rem;
-  }
-
-  .iconImg {
-    width: 35px;
-    padding: 0 5px;
-  }
-
-  .frontButton {
-    margin-bottom: 10px;
+    top: 10px;
   }
 }
 
 @media only screen and (max-width: 1100px) and (max-height: 700px) {
   .flipCardContainer {
-    width: 200px;
-    height: 480px;
-    perspective: 800px;
+    width: 300px;
+    height: 450px;
   }
 
   .aboutButton,
@@ -250,3 +224,59 @@
     margin-bottom: 10px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .flipCardContainer {
+    width: 200px;
+    height: 300px;
+    background-size: 100%;
+    margin: 50px auto 30px auto;
+  }
+
+  .front h2,
+  .front h3 {
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+
+  .front h3 {
+    color: #82cbff;
+    font-weight: 200;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .frontButton {
+    top: 180px;
+  }
+
+  .aboutButton,
+  .skillsButton {
+    padding: 5px;
+  }
+
+  .buttonsContainer {
+    bottom: -165px;
+  }
+
+  .backButton {
+    top: -60px;
+    font-size: 0.7rem;
+    padding: 5px 10px;
+    height: 25px;
+  }
+
+  .textContainer {
+    bottom: -165px;
+    padding: 5px 35px;
+  }
+
+  .textContainer p {
+    font-size: 0.6rem;
+  }
+
+  .iconImg {
+    width: 30px;
+    padding: 0 5px;
+  }
+}
+

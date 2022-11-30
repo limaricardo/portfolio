@@ -47,6 +47,8 @@ const Flipcard = () => {
       <div id="flipCard" className={styles.card}>
         <div id="frontCard" className={styles.front}>
           <div className={styles.frontCard}>
+            <h2>Ricardo Pereira Lima</h2>
+            <h3>DEV Front-End</h3>
             <button
               id="frontButton"
               className={styles.frontButton}

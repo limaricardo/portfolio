@@ -32,10 +32,9 @@ h6 {
 
 .experiencesSection {
   display: flex;
-  align-items: center;
   justify-content: flex-start;
   width: 80vw;
-  height: 50vh;
+  height: 450px;
   flex-wrap: wrap;
   margin-top: 120px;
 }
@@ -211,16 +210,27 @@ p {
   font-weight: 800;
 }
 
-/* Screen under 1400 px */
+/* Screen under 1500 px */
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1500px) {
   .singleTimeline {
     margin-bottom: 15px;
   }
+
+  .buttonsCurriculoDiv {
+    width: 300px;
+    left: -5px;
+    height: 90%;
+  }
+
+  .infoContainer {
+    max-width: 500px;
+  }
 }
 
-@media only screen and (max-width: 1200px) {
-  .experiencesSection {
+@media only screen and (max-width: 1370px) {
+  .experiencesSection,
+  .educationExperiences {
     align-items: center;
   }
 
@@ -231,7 +241,6 @@ p {
     width: 50vw;
     border-radius: 20px;
     padding: 0 15px;
-    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
   }
 
   .educationExperiences,
@@ -265,7 +274,7 @@ p {
     overflow: auto;
   }
   .timelineText span {
-    color: black;
+    color: rgb(255, 255, 255);
     display: block;
     width: 100%;
     margin-top: 25px;
@@ -274,6 +283,25 @@ p {
   }
   .timelineText span h6 {
     font-size: 1.1rem;
+  }
+
+  .buttonsCurriculoDiv {
+    width: 300px;
+    left: -5px;
+    height: 100%;
+  }
+
+  .buttonsCurriculoDiv button {
+    font-size: 1.3rem;
+    height: 60px;
+  }
+
+  .infoContainer p {
+    font-size: 1rem;
+  }
+
+  .timelineContainer {
+    padding: 0 30px;
   }
 }
 
@@ -304,51 +332,20 @@ p {
 }
 
 @media only screen and (max-width: 600px) and (min-height: 700px) {
-  .curriculoContainer header h1 {
-    font-size: 3rem;
-  }
-  .curriculoContainer {
-    overflow: scroll;
-  }
 
-  .experiencesSection {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    overflow: scroll;
-    height: 100%;
-    margin-top: 0px;
-  }
-
-  .workExperiencesSection {
-    min-width: 100px;
-  }
-
-  .experiencesDiv {
-    width: 80vw;
-    height: 500px;
-    margin: 20px auto;
-  }
-
-  .timelineText span {
-    color: black;
-    display: block;
-    width: 100%;
-    margin-top: 25px;
-    text-align: left;
-    font-size: 0.9rem;
-  }
-  .timelineText span h6 {
-    font-size: 1rem;
-  }
 }
 
-@media only screen and (max-width: 600px) and (max-height: 700px) {
+@media only screen and (max-width: 600px) {
+  .curriculoContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+  }
+
   .curriculoContainer header h1 {
     font-size: 3rem;
-  }
-  .curriculoContainer {
-    overflow: scroll;
   }
 
   .curriculoContainer h4 {
@@ -357,25 +354,37 @@ p {
 
   .experiencesSection {
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
     overflow: scroll;
-    height: 100%;
+    width: 100vw;
+    height: 90vh;
     margin-top: 0px;
   }
 
   .workExperiencesSection {
-    min-width: 100px;
+    max-width: 300px;
   }
 
   .experiencesDiv {
-    width: 80vw;
+    width: 85vw;
     height: 500px;
-    margin: 20px auto;
+    padding: 0px;
+    margin: 20px 0px;
+  }
+
+  .allTimelines {
+    padding: 0px;
+  }
+
+  .allTimelines:before {
+    left: 0px;
+  }
+
+  .timelineContainer {
+    padding: 0px;
   }
 
   .timelineText span {
-    color: black;
+    color: rgb(255, 255, 255);
     display: block;
     width: 100%;
     margin-top: 25px;
@@ -392,5 +401,20 @@ p {
 
   .backButton {
     bottom: -143px;
+  }
+
+  .buttonsCurriculoDiv {
+    width: 230px;
+    height: 350px;
+    margin-bottom: 70px;
+  }
+
+  .infoContainer {
+    max-width: 270px;
+  }
+
+  .skillsDiv {
+    width: 100%;
+    gap: 65px;
   }
 }
