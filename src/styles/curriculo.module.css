@@ -1,0 +1,312 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.curriculoContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(rgb(229, 240, 245), rgb(4, 111, 154));
+  overflow: scroll;
+}
+
+.curriculoContainer h1 {
+  color: rgb(252, 252, 252);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif,
+    Courier, monospace;
+  font-size: 5rem;
+}
+
+.curriculoContainer header {
+  width: 100%;
+  text-align: left;
+  font-size: 0.4rem;
+  padding-left: 20px;
+  height: 10vh;
+}
+
+.experiencesSection {
+  display: flex;
+  align-items: flex-start;
+  width: 100vw;
+  height: 50vh;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.experiencesDiv {
+  display: flex;
+  width: 70vw;
+}
+
+.workExperiencesSection,
+.educationExperiences {
+  min-width: 420px;
+}
+
+.profile {
+  width: 200px;
+}
+
+p {
+  font-size: 0.8rem;
+  line-height: 26px;
+  margin: 0;
+}
+.timelineContainer {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.timelines h2 {
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+.dFlex2 {
+  display: flex;
+  align-items: flex-start;
+}
+
+.allTimelines {
+  position: relative;
+}
+
+.allTimelines::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  margin: auto;
+  height: 100%;
+  width: 2px;
+  background: #fff;
+  top: 20px;
+}
+.singleTimeline {
+  margin-bottom: 25px;
+}
+.timelineText {
+  width: 100%;
+  padding-left: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+.timelineText h6 {
+  color: black;
+  font-weight: 900;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+.timelineText span {
+  color: black;
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  text-align: left;
+  font-size: 0.8rem;
+}
+.tSquare {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: -5px;
+  border-radius: 50%;
+  background: #fff;
+  margin-top: 20px;
+}
+
+/* Screen under 1400 px */
+
+@media only screen and (max-width: 1400px) {
+  .singleTimeline {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .experiencesSection {
+    align-items: center;
+  }
+
+  .experiencesDiv {
+    overflow: scroll;
+    flex-direction: column;
+    height: 100%;
+    width: 50vw;
+    border-radius: 20px;
+    padding: 0 15px;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  }
+
+  .educationExperiences,
+  .workExperiencesSection {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .tSquare {
+    margin-top: 35px;
+  }
+
+  .allTimelines {
+    padding-left: 30px;
+  }
+
+  .allTimelines::before {
+    left: 30px;
+    top: 40px;
+    height: calc(100% - 35px);
+  }
+  .singleTimeline {
+    margin-bottom: 5px;
+  }
+  .timelineContainer {
+    padding: 0;
+  }
+  .timelines h2 {
+    margin-bottom: 0px;
+    width: 100%;
+    overflow: auto;
+  }
+  .timelineText span {
+    color: black;
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    text-align: left;
+    font-size: 1.1rem;
+  }
+  .timelineText span h6 {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (max-height: 600px) {
+  .curriculoContainer {
+    overflow: scroll;
+  }
+
+  .experiencesDiv {
+    width: 50vw;
+    margin-top: 15px;
+  }
+
+  .timelineText span {
+    font-size: 0.9rem;
+  }
+  .timelineText span h6 {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .educationExperiences,
+  .workExperiencesSection {
+    margin-top: 20px;
+    min-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-height: 700px) {
+  .curriculoContainer header h1 {
+    font-size: 3rem;
+  }
+  .curriculoContainer {
+    overflow: scroll;
+  }
+
+  .experiencesSection {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: scroll;
+    height: 100%;
+    margin-top: 0px;
+  }
+
+  .workExperiencesSection {
+    min-width: 100px;
+  }
+
+  .experiencesDiv {
+    width: 80vw;
+    height: 500px;
+    margin: 20px auto;
+  }
+
+  .timelineText span {
+    color: black;
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  .timelineText span h6 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) and (max-height: 700px) {
+  .curriculoContainer header h1 {
+    font-size: 3rem;
+  }
+  .curriculoContainer {
+    overflow: scroll;
+  }
+
+  .curriculoContainer h4 {
+    font-size: .7rem;
+  }
+
+  .experiencesSection {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: scroll;
+    height: 100%;
+    margin-top: 0px;
+  }
+
+  .workExperiencesSection {
+    min-width: 100px;
+  }
+
+  .experiencesDiv {
+    width: 80vw;
+    height: 500px;
+    margin: 20px auto;
+  }
+
+  .timelineText span {
+    color: black;
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  .timelineText span h6 {
+    font-size: .8rem;
+  }
+
+  .buttonsContainer {
+    bottom: -80px;
+  }
+
+  .backButton {
+    bottom: -143px;
+  }
+}

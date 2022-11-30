@@ -1,0 +1,534 @@
+.socialContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url("https://i.imgur.com/M4s877i.png");
+}
+
+.socialContainer .mockupImg {
+  width: 320px;
+  position: relative;
+  top: 32vh;
+  left: 0vw;
+}
+
+.instaImg {
+  display: block;
+  position: absolute;
+  top: 40vh;
+  left: 50vw;
+  width: 0;
+  z-index: 1500;
+}
+
+.mockupImg:hover + .instaImg {
+  top: 2vh;
+  left: 40vw;
+  width: 300px;
+  z-index: 1500;
+  border-radius: 5px;
+  transition: ease-in-out 2s;
+  transform: translate(-450px, 50px);
+}
+
+.socialContainer .github,
+.socialContainer .linkedin {
+  -webkit-animation: githubAnimation 5s linear infinite;
+  animation: githubAnimation 5s linear infinite;
+}
+
+@keyframes githubAnimation {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    top: 200px;
+  }
+}
+
+.socialContainer .discord {
+  -webkit-animation: discordAnimation 4s linear infinite;
+  animation: discordAnimation 4s linear infinite;
+}
+
+@keyframes discordAnimation {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    top: -250px;
+  }
+}
+
+.socialContainer .youtube {
+  -webkit-animation: youtubeAnimation 5s linear infinite;
+  animation: youtubeAnimation 5s linear infinite;
+}
+
+@keyframes youtubeAnimation {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    top: -100px;
+  }
+}
+
+.socialContainer .whatsapp {
+  -webkit-animation: whatsappAnimation 5s linear infinite;
+  animation: whatsappAnimation 5s linear infinite;
+}
+
+@keyframes whatsappAnimation {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    top: 100px;
+  }
+}
+
+.socialContainer .github {
+  position: relative;
+  top: 40vh;
+  left: 32vw;
+}
+
+.socialContainer .whatsapp {
+  position: relative;
+  top: 27vh;
+  left: 49vw;
+}
+.socialContainer .linkedin {
+  position: relative;
+  top: 0vh;
+  left: -3vw;
+}
+.socialContainer .youtube {
+  position: relative;
+  top: -24vh;
+  left: 8vw;
+}
+.socialContainer .discord {
+  position: relative;
+  top: -14vh;
+  left: 21vw;
+}
+
+.socialContainer ul {
+  position: relative;
+  display: flex;
+  transform-style: preserve-3d;
+  transform: rotate(324deg) skew(25deg);
+}
+
+.socialContainer ul li {
+  position: relative;
+  list-style: none;
+  width: 65px;
+  height: 65px;
+  margin: 0 30px;
+}
+
+.socialContainer ul li::before {
+  content: "";
+  position: absolute;
+  bottom: -21px;
+  left: 3px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 4px;
+  width: 100%;
+  height: 28px;
+  background: #2a2a2a;
+  transform-origin: top;
+  transform: skewX(-41deg);
+  background: rgb(32, 27, 119);
+  background: linear-gradient(
+    90deg,
+    rgba(32, 27, 119, 1) 0%,
+    rgba(102, 0, 235, 1) 0%,
+    rgba(193, 49, 241, 1) 38%,
+    rgba(198, 62, 242, 1) 67%,
+    rgba(212, 136, 237, 1) 90%
+  );
+}
+
+.socialContainer ul li::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -24px;
+  width: 25px;
+  height: 100%;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 23px;
+  transform-origin: right;
+  transform: skewY(307deg);
+  background: linear-gradient(
+    180deg,
+    rgba(32, 27, 119, 1) 0%,
+    rgba(29, 2, 65, 1) 0%,
+    rgba(34, 3, 74, 1) 23%,
+    rgba(78, 5, 173, 1) 56%,
+    rgba(122, 0, 235, 1) 100%
+  );
+}
+
+.socialContainer ul li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(3, 0, 0);
+  color: rgba(255, 255, 255);
+  font-size: 30px;
+  transition: 0.2s;
+}
+
+.whatsapp span,
+.github span {
+  transform: rotate(90deg);
+}
+
+.socialContainer ul li:hover span {
+  z-index: 1000;
+  transition: 0.5s;
+  color: #fff;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.socialContainer ul li:hover span:nth-child(5) {
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+.socialContainer ul li:hover span:nth-child(4) {
+  transform: translate(30px, -30px);
+  opacity: 0.8;
+}
+.socialContainer ul li:hover span:nth-child(3) {
+  transform: translate(20px, -20px);
+  opacity: 0.6;
+}
+.socialContainer ul li:hover span:nth-child(2) {
+  transform: translate(10px, -10px);
+  opacity: 0.4;
+}
+.socialContainer ul li:hover span:nth-child(1) {
+  transform: translate(0px, 0px);
+  opacity: 0.2;
+}
+
+.socialContainer ul .linkedin:hover span:nth-child(5),
+.socialContainer ul .youtube:hover span:nth-child(5),
+.socialContainer ul .discord:hover span:nth-child(5) {
+  transform: translate(40px, -40px) rotate(90deg);
+  opacity: 1;
+}
+.socialContainer ul .linkedin:hover span:nth-child(4),
+.socialContainer ul .youtube:hover span:nth-child(4),
+.socialContainer ul .discord:hover span:nth-child(4) {
+  transform: translate(30px, -30px) rotate(90deg);
+  opacity: 0.8;
+}
+
+.socialContainer ul .linkedin:hover span:nth-child(3),
+.socialContainer ul .youtube:hover span:nth-child(3),
+.socialContainer ul .discord:hover span:nth-child(3) {
+  transform: translate(20px, -20px) rotate(90deg);
+  opacity: 0.6;
+}
+.socialContainer ul .linkedin:hover span:nth-child(2),
+.socialContainer ul .youtube:hover span:nth-child(2),
+.socialContainer ul .discord:hover span:nth-child(2) {
+  transform: translate(10px, -10px) rotate(90deg);
+  opacity: 0.4;
+}
+.socialContainer ul .linkedin:hover span:nth-child(1),
+.socialContainer ul .youtube:hover span:nth-child(1),
+.socialContainer ul .discord:hover span:nth-child(1) {
+  transform: translate(0px, 0px) rotate(90deg);
+  opacity: 0.2;
+}
+
+.socialContainer li:nth-child(1):hover span {
+  background: rgb(33, 33, 33);
+}
+.socialContainer li:nth-child(2):hover span {
+  background: #25d366;
+}
+.socialContainer li:nth-child(3):hover span {
+  background: #0077b5;
+}
+.socialContainer li:nth-child(4):hover span {
+  background: #ff0000;
+}
+.socialContainer li:nth-child(5):hover span {
+  background: #7289da;
+}
+
+/* Screen under 900 px */
+
+@media only screen and (max-width: 900px) {
+  .socialContainer ul li {
+    width: 60px;
+    height: 60px;
+  }
+
+  .socialContainer ul li span {
+    width: 60px;
+    font-size: 25px;
+  }
+
+  .socialContainer ul li::before {
+    width: 60px;
+  }
+
+  .socialContainer .linkedin {
+    -webkit-animation: linkedinAnimation 7s linear infinite;
+    animation: linkedinAnimation 7s linear infinite;
+  }
+
+  @keyframes linkedinAnimation {
+    0%,
+    100% {
+      top: 90px;
+    }
+    50% {
+      top: 380px;
+    }
+  }
+
+  .socialContainer .github {
+    -webkit-animation: githubAnimation 7s linear infinite;
+    animation: githubAnimation 7s linear infinite;
+  }
+
+  @keyframes githubAnimation {
+    0%,
+    100% {
+      bottom: 0px;
+    }
+    50% {
+      top: 250px;
+    }
+  }
+
+  .socialContainer .discord {
+    -webkit-animation: discordAnimation 6s linear infinite;
+    animation: discordAnimation 6s linear infinite;
+  }
+
+  @keyframes discordAnimation {
+    0%,
+    100% {
+      bottom: 0;
+    }
+    50% {
+      top: -170px;
+    }
+  }
+
+  .socialContainer .youtube {
+    -webkit-animation: youtubeAnimation 5s linear infinite;
+    animation: youtubeAnimation 5s linear infinite;
+  }
+
+  @keyframes youtubeAnimation {
+    0%,
+    100% {
+      top: -150px;
+    }
+    50% {
+      top: -20px;
+    }
+  }
+
+  .socialContainer .whatsapp {
+    -webkit-animation: whatsappAnimation 5s linear infinite;
+    animation: whatsappAnimation 5s linear infinite;
+  }
+
+  @keyframes whatsappAnimation {
+    0%,
+    100% {
+      bottom: 0;
+    }
+    50% {
+      top: 250px;
+    }
+  }
+
+  .socialContainer .github {
+    top: 50vh;
+    left: -5vw;
+  }
+
+  .socialContainer .whatsapp {
+    top: 34vh;
+    left: 16vw;
+  }
+  .socialContainer .linkedin {
+    top: 61vh;
+    left: -54vw;
+  }
+  .socialContainer .youtube {
+    top: -26vh;
+    left: -28vw;
+  }
+  .socialContainer .discord {
+    top: 1vh;
+    left: -4vw;
+  }
+
+  .socialContainer .mockupImg {
+    width: 380px;
+  }
+
+  .mockupImg:hover + .instaImg {
+    top: 10vh;
+    left: 90vw;
+    width: 270px;
+  }
+}
+
+/* Mobile screen under 599 px */
+
+@media only screen and (max-width: 599px) {
+  .socialContainer ul li {
+    width: 50px;
+    height: 50px;
+  }
+
+  .socialContainer ul li span {
+    width: 50px;
+    font-size: 25px;
+  }
+
+  .socialContainer ul li::before {
+    width: 50px;
+  }
+
+  .socialContainer .linkedin {
+    -webkit-animation: linkedinAnimation 7s linear infinite;
+    animation: linkedinAnimation 7s linear infinite;
+  }
+
+  @keyframes linkedinAnimation {
+    0%,
+    100% {
+      top: 90px;
+    }
+    50% {
+      top: 180px;
+    }
+  }
+
+  .socialContainer .github {
+    -webkit-animation: githubAnimation 7s linear infinite;
+    animation: githubAnimation 7s linear infinite;
+  }
+
+  @keyframes githubAnimation {
+    0%,
+    100% {
+      bottom: 0px;
+    }
+    50% {
+      top: 250px;
+    }
+  }
+
+  .socialContainer .discord {
+    -webkit-animation: discordAnimation 6s linear infinite;
+    animation: discordAnimation 6s linear infinite;
+  }
+
+  @keyframes discordAnimation {
+    0%,
+    100% {
+      bottom: 0;
+    }
+    50% {
+      top: -170px;
+    }
+  }
+
+  .socialContainer .youtube {
+    -webkit-animation: youtubeAnimation 5s linear infinite;
+    animation: youtubeAnimation 5s linear infinite;
+  }
+
+  @keyframes youtubeAnimation {
+    0%,
+    100% {
+      top: -150px;
+    }
+    50% {
+      top: -50px;
+    }
+  }
+
+  .socialContainer .whatsapp {
+    -webkit-animation: whatsappAnimation 5s linear infinite;
+    animation: whatsappAnimation 5s linear infinite;
+  }
+
+  @keyframes whatsappAnimation {
+    0%,
+    100% {
+      bottom: 0;
+    }
+    50% {
+      top: 150px;
+    }
+  }
+
+  .socialContainer .github {
+    top: 50vh;
+    left: -37vw;
+  }
+
+  .socialContainer .whatsapp {
+    top: 32vh;
+    left: -10vw;
+  }
+  .socialContainer .linkedin {
+    top: 0vh;
+    left: -76vw;
+  }
+  .socialContainer .youtube {
+    top: -26vh;
+    left: -28vw;
+  }
+  .socialContainer .discord {
+    top: 1vh;
+    left: -4vw;
+  }
+
+  .socialContainer .mockupImg {
+    width: 280px;
+  }
+
+  .mockupImg:hover + .instaImg {
+    top: 5vh;
+    left: 150vw;
+    width: 170px;
+  }
+}
+
+@media only screen and (max-width: 599px) and (min-height: 700px) {
+  .socialContainer .github {
+    top: 50vh;
+    left: -67vw;
+  }
+}

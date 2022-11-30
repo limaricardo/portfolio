@@ -1,0 +1,96 @@
+.hireContainer {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: radial-gradient(rgb(106, 108, 172), rgb(0, 0, 0));
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 350px;
+  color: white;
+}
+
+.question > p {
+  font-size: 5rem;
+  color: rgb(232, 162, 78);
+  line-height: 5rem;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  width: 60vw;
+}
+
+.hireContainer .divButtonNo,
+.hireContainer .divButtonYes {
+  padding: 15px;
+  width: 50%;
+  text-align: center;
+  background-color: transparent;
+}
+
+.hireContainer .divButtonNo button {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 2rem;
+  padding: 10px 50px;
+}
+
+.hireContainer .divButtonYes button {
+  background: rgb(255, 255, 255);
+  color: green;
+  border: none;
+  border-radius: 20px;
+  font-size: 2rem;
+  padding: 10px 50px;
+  cursor: pointer;
+}
+
+/* Screen under 1400 px */
+
+@media only screen and (max-width: 1400px) {
+  .hireWrapper {
+    width: 40vw;
+  }
+}
+
+/* Screen under 900px */
+
+@media only screen and (max-width: 1200px) {
+  .question {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+    color: white;
+  }
+
+  .question > p {
+    font-size: 2rem;
+    color: rgb(232, 162, 78);
+    line-height: 3rem;
+  }
+
+  .hireContainer .divButtonNo button {
+    border-radius: 20px;
+    font-size: 1.5rem;
+    padding: 5px 30px;
+  }
+
+  .hireContainer .divButtonYes button {
+    font-size: 1.5rem;
+    padding: 5px 30px;
+    cursor: pointer;
+  }
+}
+

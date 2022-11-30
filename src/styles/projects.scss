@@ -1,0 +1,967 @@
+@use "sass:math";
+
+* {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Indie Flower", cursive;
+  background-color: #eee;
+  color: #555;
+  text-align: center;
+}
+
+$bookAngle: 60deg;
+$speed: 4s;
+$borderColor: rgb(0, 2, 10);
+
+$images: url("https://i.imgur.com/LWQG6dF.png"),
+  url("https://i.imgur.com/0bVj5rb.png"), url("https://i.imgur.com/LWQG6dF.png"),
+  url("https://i.imgur.com/kYCTrZz.png"), url("https://i.imgur.com/Ijt1eA7.png"),
+  url("https://i.imgur.com/FHJBhk1.png"), url("https://i.imgur.com/kvMmFrO.png"),
+  url("https://i.imgur.com/G07HO9l.png"), url("https://i.imgur.com/uSToRvq.png"),
+  url("https://i.imgur.com/nE7qcqx.png"), url("https://i.imgur.com/0O5XCPX.png"),
+  url("https://i.imgur.com/AazsieU.png"), url("https://i.imgur.com/1P5XXgG.png"),
+  url("https://i.imgur.com/DXsPgUM.png"), url("https://i.imgur.com/w6i8Gwk.png"),
+  url("https://i.imgur.com/IaOQMza.png"), url("https://i.imgur.com/080LcFO.png"),
+  url("https://i.imgur.com/5x5qV8L.png"), url("https://i.imgur.com/KGpCJnP.png"),
+  url("https://i.imgur.com/7avcEXW.png"), url("https://i.imgur.com/UShgdfy.png"),
+  url("https://i.imgur.com/uLRLtyk.png"), url("https://i.imgur.com/xHwcPTH.png"),
+  url("https://i.imgur.com/IAWWnev.png");
+
+$imagesReverse: url("https://i.imgur.com/mhHUaIP.png"),
+  url("https://i.imgur.com/4qVixTz.png"), url("https://i.imgur.com/ZxEgjtJ.png"),
+  url("https://i.imgur.com/SCtq3Xj.png"), url("https://i.imgur.com/J39AE19.png"),
+  url("https://i.imgur.com/jAjWNpa.png"), url("https://i.imgur.com/a538bBH.png"),
+  url("https://i.imgur.com/FBJYquy.png"), url("https://i.imgur.com/t9HBaca.png"),
+  url("https://i.imgur.com/pMUnUUK.png"), url("https://i.imgur.com/G0wN653.png"),
+  url("https://i.imgur.com/NJEqrvR.png"), url("https://i.imgur.com/0GYJnpM.png"),
+  url("https://i.imgur.com/GMTrOn7.png"), url("https://i.imgur.com/qVCcLlH.png"),
+  url("https://i.imgur.com/peks067.png"), url("https://i.imgur.com/C2z4ReZ.png"),
+  url("https://i.imgur.com/Pr8ZqZf.png"), url("https://i.imgur.com/Ar03ngB.png"),
+  url("https://i.imgur.com/P2XsyKT.png"), url("https://i.imgur.com/vfQQcVy.png"),
+  url("https://i.imgur.com/KCkGZvL.png"), url("https://i.imgur.com/GOdCV6H.png");
+
+#projects {
+  background: radial-gradient(rgb(125, 234, 253), rgb(0, 18, 110));
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  width: 420px;
+  border-radius: 4px;
+  height: 70vh;
+}
+
+.book {
+  position: relative;
+  top: 130px;
+  perspective: 630px;
+  perspective-origin: center 50px;
+  transform: scale(2);
+  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.25));
+}
+
+.page {
+  width: 210px;
+  height: 530px;
+  background-color: rgb(187, 187, 187);
+  position: absolute;
+  top: -230px;
+  right: 50%;
+  transform-origin: 100% 100%;
+  border: solid $borderColor 2px;
+  background-size: 420px 300px;
+  background-position: center;
+  transform-style: preserve-3d;
+
+  &:nth-child(1) {
+    transform: rotateX($bookAngle) rotateY(0deg);
+  }
+  &:nth-child(2) {
+    transform: rotateX($bookAngle) rotateY(0deg);
+  }
+  &:nth-child(3) {
+    transform: rotateX($bookAngle) rotateY(0deg);
+    animation: nextPage $speed * 5 infinite $speed * -4.8 steps(1);
+    background-size: 210px 530px;
+    background-position: -2px -2px;
+    border-radius: 10% 41% 24% 30% / 0% 2.5% 2.5% 0%;
+    box-shadow: 4px 7px 12px -1px rgba(0, 0, 0, 0.91);
+  }
+  &:nth-child(4) {
+    transform: rotateX($bookAngle) rotateY(180deg);
+  }
+  &:nth-child(5) {
+    transform: rotateX($bookAngle) rotateY(180deg);
+  }
+  &:nth-child(6) {
+    transform: rotateX($bookAngle) rotateY(180deg);
+    overflow: hidden;
+    animation: nextPage $speed * 5 infinite $speed * -4.8 steps(1);
+    background-size: 210px 530px;
+    background-position: -2px -2px;
+    box-shadow: 4px 7px 12px -1px rgba(0, 0, 0, 0.91);
+  }
+
+  &::after {
+    width: 210px;
+    height: 530px;
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    transform-origin: center;
+    transform: rotateY(180deg);
+    animation: nextPage $speed * 5 $speed * -4 infinite steps(1);
+    background-size: 210px 530px;
+    background-position: 100% -2px;
+  }
+}
+
+.flips2 {
+  transform: scaleX(-1);
+  position: absolute;
+  top: 0px;
+  right: 50%;
+}
+
+.flip {
+  &.flip1 {
+    right: 50%;
+    animation: flip1 $speed infinite ease-in-out;
+    border-width: 2px 2px 2px 0;
+
+    &::after {
+      animation: nextFlip1 $speed * 5 $speed * -4 infinite steps(1);
+    }
+  }
+
+  &.flep1 {
+    &::after {
+      border-radius: 0% 100% 100% 0% / 0% 2.4% 2.4% 0%;
+    }
+  }
+
+  &.flop1 {
+    &::after {
+      border-radius: 100% 0% 0% 100% / 2.4% 0% 0% 2.4%;
+    }
+  }
+
+  &:not(.flip1) {
+    right: calc(100% - 2px);
+    top: -2px;
+    transform-origin: right;
+    animation: flip2 $speed ease-in-out infinite;
+  }
+
+  @for $i from 2 through 7 {
+    &.flip#{$i}::after {
+      animation: nextFlip#{$i} $speed * 5 $speed * -4 infinite steps(1);
+    }
+  }
+
+  &.flip7 {
+    width: 30px;
+    border-width: 2px 0px 2px 2px;
+    &::after {
+      animation: nextFlip7 $speed * 5 $speed * -4 infinite steps(1);
+    }
+  }
+
+  @keyframes flip1 {
+    0%,
+    20% {
+      transform: rotateX($bookAngle) rotateY(0deg);
+    }
+    80%,
+    100% {
+      transform: rotateX($bookAngle) rotateY(180deg);
+    }
+  }
+
+  @keyframes flip2 {
+    0%,
+    20% {
+      transform: rotateY(0deg) translateY(0px);
+    }
+    50% {
+      transform: rotateY(-15deg) translateY(0px);
+    }
+  }
+}
+
+@for $x from 0 through 10 {
+  .flipPageForward#{$x} {
+    width: 32px;
+    height: 530px;
+    position: absolute;
+    top: -230px;
+    transform-origin: 100% 100%;
+    right: 100%;
+    border: solid $borderColor;
+    border-width: 2px 0px;
+    perspective: 4200px;
+    perspective-origin: center;
+    transform-style: preserve-3d;
+    background-size: 420px 300px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0%;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      background-size: 210px 530px;
+    }
+    &.flip1 {
+      right: 50%;
+      animation: flip#{$x}Forward1 $speed infinite ease-in-out;
+      border-width: 2px 2px 2px 0;
+
+      &::after {
+        animation: nextFlip#{$x}Forward1
+          $speed *
+          5
+          $speed *
+          -4
+          infinite
+          steps(1);
+      }
+    }
+    &:not(.flip1) {
+      right: calc(100% - 2px);
+      top: -2px;
+      transform-origin: right;
+      animation: flip#{$x}Forward2 $speed ease-in-out infinite;
+    }
+
+    @for $i from 2 through 7 {
+      &.flip#{$i}::after {
+        animation: nextFlip#{$x}Forward#{$i}
+          $speed *
+          5
+          $speed *
+          -4
+          infinite
+          steps(1);
+      }
+    }
+
+    &.flip7 {
+      width: 30px;
+      border-width: 2px 0px 2px 2px;
+      &::after {
+        animation: nextFlip#{$x}Forward7
+          $speed *
+          5
+          $speed *
+          -4
+          infinite
+          steps(1);
+      }
+    }
+
+    @keyframes flip#{$x}Forward1 {
+      0%,
+      20% {
+        transform: rotateX($bookAngle) rotateY(0deg);
+        border-radius: 0% 100% 100% 0% / 0% 2.7% 2.7% 0%;
+      }
+      80%,
+      100% {
+        transform: rotateX($bookAngle) rotateY(180deg);
+        border-radius: 0% 100% 100% 0% / 0% 2.7% 2.7% 0%;
+      }
+    }
+
+    @keyframes flip#{$x}Forward2 {
+      0%,
+      20% {
+        transform: rotateY(0deg) translateY(0px);
+      }
+      50% {
+        transform: rotateY(-15deg) translateY(0px);
+      }
+    }
+  }
+
+  @keyframes nextFlip#{$x}Forward1 {
+    @for $i from 0 through 4 {
+      #{$i * 20}% {
+        background-image: nth($imagesReverse, ($x + ($x + 1)));
+        background-position: -178px -2px;
+        transform: rotateY(0deg);
+      }
+
+      #{10+($i * 20)}% {
+        background-image: nth($imagesReverse, ($x + ($x + 2)));
+        background-position: -210px -2px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  @for $i from 2 through 6 {
+    @keyframes nextFlip#{$x}Forward#{$i} {
+      @for $j from 0 through 4 {
+        #{$j * 20}% {
+          background-image: nth($imagesReverse, ($x + ($x + 1)));
+          background-position: #{-148 + (($i - 2) * 30)}px -2px;
+          transform: rotateY(0deg);
+        }
+
+        #{((10 + ($j * 20)) + (($i - 1) * 0.5))}% {
+          background-image: nth($imagesReverse, ($x + ($x + 2)));
+          background-position: #{-238 - (($i - 2) * 30)}px -2px;
+          transform: rotateY(180deg);
+        }
+      }
+    }
+  }
+
+  @keyframes nextFlip#{$x}Forward7 {
+    @for $i from 0 through 4 {
+      #{$i * 20}% {
+        background-image: nth($imagesReverse, ($x + ($x + 1)));
+        background-position: -2px -2px;
+        transform: rotateY(0deg);
+      }
+      #{13+($i * 20)}% {
+        background-image: nth($imagesReverse, ($x + ($x + 2)));
+        background-position: -388px -2px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  .flipPageBackward#{$x + 1} {
+    width: 32px;
+    height: 530px;
+    position: absolute;
+    top: -230px;
+    transform-origin: 100% 100%;
+    right: 100%;
+    border: solid $borderColor;
+    border-width: 2px 0px;
+    perspective: 4200px;
+    perspective-origin: center;
+    transform-style: preserve-3d;
+    background-size: 420px 300px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0%;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      background-size: 210px 530px;
+    }
+    &.flip1 {
+      right: 50%;
+      animation: flip#{$x + 1}Backward1 $speed infinite ease-in-out;
+      border-width: 2px 2px 2px 0;
+
+      &::after {
+        animation: nextFlip#{$x +
+          1}Backward1
+          $speed *
+          5
+          $speed *
+          -4
+          infinite
+          steps(1);
+      }
+    }
+    &:not(.flip1) {
+      right: calc(100% - 2px);
+      top: -2px;
+      transform-origin: right;
+      animation: flip#{$x + 1}Backward2 $speed ease-in-out infinite;
+    }
+
+    @for $i from 2 through 7 {
+      &.flip#{$i}::after {
+        animation: nextFlip#{$x +
+          1}Backward#{$i}
+          $speed *
+          5
+          $speed *
+          -4
+          infinite
+          steps(1);
+      }
+    }
+
+    &.flip7 {
+      width: 30px;
+      border-width: 2px 0px 2px 2px;
+      &::after {
+        animation: nextFlip#{$x +
+          1}Backward7
+          $speed *
+          5
+          $speed *
+          -4
+          infinite
+          steps(1);
+      }
+    }
+
+    @keyframes flip#{$x+1}Backward1 {
+      0%,
+      20% {
+        transform: rotateX($bookAngle) rotateY(0deg);
+        border-radius: 0% 100% 100% 0% / 0% 2.7% 2.7% 0%;
+      }
+      80%,
+      100% {
+        transform: rotateX($bookAngle) rotateY(180deg);
+        border-radius: 0% 100% 100% 0% / 0% 2.7% 2.7% 0%;
+      }
+    }
+
+    @keyframes flip#{$x+1}Backward2 {
+      0%,
+      20% {
+        transform: rotateY(0deg) translateY(0px);
+      }
+      50% {
+        transform: rotateY(-15deg) translateY(0px);
+      }
+    }
+  }
+
+  @keyframes nextFlip#{$x+1}Backward1 {
+    @for $i from 0 through 4 {
+      #{$i * 20}% {
+        background-image: nth($images, ($x + ($x + 3)));
+        background-position: -178px -2px;
+        transform: rotateY(0deg);
+      }
+      #{10+($i * 20)}% {
+        background-image: nth($images, ($x + ($x + 2)));
+        background-position: -210px -2px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  @for $i from 2 through 6 {
+    @keyframes nextFlip#{$x+1}Backward#{$i} {
+      @for $j from 1 through 4 {
+        #{$j * 20}% {
+          background-image: nth($images, ($x + ($x + 3)));
+          background-position: #{-148 + (($i - 2) * 30)}px -2px;
+          transform: rotateY(0deg);
+        }
+        #{((10 + ($j * 20)) + (($i - 1) * 0.5))}% {
+          background-image: nth($images, ($x + ($x + 2)));
+          background-position: #{-238 - (($i - 2) * 30)}px -2px;
+          transform: rotateY(180deg);
+        }
+      }
+    }
+  }
+
+  @keyframes nextFlip#{$x+1}Backward7 {
+    @for $i from 0 through 4 {
+      #{$i * 20}% {
+        background-image: nth($images, ($x + ($x + 3)));
+        background-position: -2px -2px;
+        transform: rotateY(0deg);
+      }
+      #{13+($i * 20)}% {
+        background-image: nth($images, ($x + ($x + 2)));
+        background-position: -388px -2px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
+
+.buttonPreviousPage,
+.buttonNextPage,
+.disabled {
+  text-align: center;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: 2px solid rgb(244, 244, 84);
+  font-size: 0.6rem;
+  top: 140px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: ease-in-out 500ms;
+}
+
+.buttonPreviousPage:hover,
+.buttonNextPage:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(244, 244, 84);
+}
+
+#page3,
+#page6 {
+  background-color: white;
+}
+
+.nextPage {
+  left: 550px;
+}
+
+.previousPage {
+  left: -150px;
+}
+
+.closeBook {
+  left: -150px;
+}
+
+.openBook {
+  left: 0px;
+  transform: scaleX(1);
+}
+
+.disabled {
+  background-color: rgb(131, 131, 131);
+  color: rgb(201, 201, 201);
+  border: 2px solid rgb(245, 245, 197);
+  cursor: default;
+}
+
+/* Screen under 1500 px */
+
+@media only screen and (max-width: 1500px) {
+  .container {
+    height: 70vh;
+  }
+
+  .book {
+    top: 65px;
+  }
+
+  .nextPage {
+    left: 450px;
+  }
+
+  .previousPage,
+  .closeBook {
+    left: -90px;
+  }
+
+  .openBook {
+    left: 50px;
+    transform: scaleX(1);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .book {
+    top: -50px;
+  }
+
+  .buttonPreviousPage,
+  .buttonNextPage,
+  .disabled {
+    width: 35px;
+    height: 35px;
+    font-size: 0.45rem;
+  }
+  .nextPage {
+    left: 425px;
+    top: 150px;
+  }
+
+  .previousPage,
+  .closeBook {
+    left: -40px;
+    top: 150px;
+  }
+
+  .openBook {
+    left: 90px;
+    top: 140px;
+    transform: scaleX(1);
+  }
+}
+
+/* Screen under 900 px */
+
+@media only screen and (max-width: 900px) {
+  .container {
+    height: 70vh;
+  }
+
+  .book {
+    top: 250px;
+  }
+
+  .pages,
+  .flips,
+  .flips2 {
+    transform-style: preserve-3d;
+  }
+
+  .buttonPreviousPage,
+  .buttonNextPage,
+  .disabled {
+    width: 45px;
+    height: 45px;
+    font-size: 0.6rem;
+  }
+  .nextPage {
+    left: 190px;
+    top: 320px;
+  }
+
+  .previousPage,
+  .closeBook {
+    left: 185px;
+    top: -20px;
+  }
+
+  .openBook {
+    left: 90px;
+    top: 140px;
+    transform: scaleX(1);
+  }
+
+  @for $x from 0 through 10 {
+    .flipPageForward#{$x} {
+      width: 32px;
+      height: 530px;
+      position: absolute;
+      top: -230px;
+      transform-origin: 100% 100%;
+      right: 100%;
+      border: solid $borderColor;
+      border-width: 2px 0px;
+      perspective: 4200px;
+      perspective-origin: center;
+      transform-style: preserve-3d;
+      background-size: 420px 300px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0%;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        background-size: 210px 530px;
+      }
+      &.flip1 {
+        right: 50%;
+        animation: flip#{$x}Forward1 $speed infinite ease-in-out;
+        border-width: 2px 2px 2px 0;
+
+        &::after {
+          animation: nextFlip#{$x}Forward1
+            $speed *
+            5
+            $speed *
+            -4
+            infinite
+            steps(1);
+        }
+      }
+      &:not(.flip1) {
+        right: calc(100% - 2px);
+        top: -2px;
+        transform-origin: right;
+        animation: flip#{$x}Forward2 $speed ease-in-out infinite;
+      }
+
+      @for $i from 2 through 7 {
+        &.flip#{$i}::after {
+          animation: nextFlip#{$x}Forward#{$i}
+            $speed *
+            5
+            $speed *
+            -4
+            infinite
+            steps(1);
+        }
+      }
+
+      &.flip7 {
+        width: 30px;
+        border-width: 2px 0px 2px 2px;
+        &::after {
+          animation: nextFlip#{$x}Forward7
+            $speed *
+            5
+            $speed *
+            -4
+            infinite
+            steps(1);
+        }
+      }
+
+      @keyframes flip#{$x}Forward1 {
+        0%,
+        20% {
+          transform: rotateX($bookAngle) rotateY(0deg);
+          border-radius: 0% 100% 100% 0% / 0% 2.7% 2.7% 0%;
+        }
+        80%,
+        100% {
+          transform: rotateX($bookAngle) rotateY(180deg);
+          border-radius: 0% 100% 100% 0% / 0% 2.7% 2.7% 0%;
+        }
+      }
+
+      @keyframes flip#{$x}Forward2 {
+        0%,
+        20% {
+          transform: rotateY(0deg) translateY(0px);
+        }
+        50% {
+          transform: rotateY(-15deg) translateY(0px);
+        }
+      }
+    }
+
+    @keyframes nextFlip#{$x}Forward1 {
+      @for $i from 0 through 4 {
+        #{$i * 20}% {
+          background-image: nth($imagesReverse, ($x + ($x + 1)));
+          background-position: -178px -2px;
+          transform: rotateY(0deg);
+          transform-style: preserve-3d;
+        }
+
+        #{10+($i * 20)}% {
+          background-image: nth($imagesReverse, ($x + ($x + 2)));
+          background-position: -210px -2px;
+          transform: rotateY(180deg);
+          transform-style: preserve-3d;
+        }
+      }
+    }
+
+    @for $i from 2 through 6 {
+      @keyframes nextFlip#{$x}Forward#{$i} {
+        @for $j from 0 through 4 {
+          #{$j * 20}% {
+            background-image: nth($imagesReverse, ($x + ($x + 1)));
+            background-position: #{-148 + (($i - 2) * 30)}px -2px;
+            transform: rotateY(0deg);
+            transform-style: preserve-3d;
+          }
+
+          #{((10 + ($j * 20)) + (($i - 1) * 0.5))}% {
+            background-image: nth($imagesReverse, ($x + ($x + 2)));
+            background-position: #{-238 - (($i - 2) * 30)}px -2px;
+            transform: rotateY(180deg);
+            transform-style: preserve-3d;
+          }
+        }
+      }
+    }
+
+    @keyframes nextFlip#{$x}Forward7 {
+      @for $i from 0 through 4 {
+        #{$i * 20}% {
+          background-image: nth($imagesReverse, ($x + ($x + 1)));
+          background-position: -2px -2px;
+          transform: rotateY(0deg);
+          transform-style: preserve-3d;
+        }
+        #{13+($i * 20)}% {
+          background-image: nth($imagesReverse, ($x + ($x + 2)));
+          background-position: -388px -2px;
+          transform: rotateY(180deg);
+          transform-style: preserve-3d;
+        }
+      }
+    }
+
+    .flipPageBackward#{$x + 1} {
+      width: 32px;
+      height: 530px;
+      position: absolute;
+      top: -230px;
+      transform-origin: 100% 100%;
+      right: 100%;
+      border: solid $borderColor;
+      border-width: 2px 0px;
+      perspective: 4200px;
+      perspective-origin: center;
+      transform-style: preserve-3d;
+      background-size: 420px 300px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0%;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        background-size: 210px 530px;
+      }
+      &.flip1 {
+        right: 50%;
+        animation: flip#{$x + 1}Backward1 $speed infinite ease-in-out;
+        border-width: 2px 2px 2px 0;
+
+        &::after {
+          animation: nextFlip#{$x +
+            1}Backward1
+            $speed *
+            5
+            $speed *
+            -4
+            infinite
+            steps(1);
+        }
+      }
+      &:not(.flip1) {
+        right: calc(100% - 2px);
+        top: -2px;
+        transform-origin: right;
+        animation: flip#{$x + 1}Backward2 $speed ease-in-out infinite;
+      }
+
+      @for $i from 2 through 7 {
+        &.flip#{$i}::after {
+          animation: nextFlip#{$x +
+            1}Backward#{$i}
+            $speed *
+            5
+            $speed *
+            -4
+            infinite
+            steps(1);
+        }
+      }
+
+      &.flip7 {
+        width: 30px;
+        border-width: 2px 0px 2px 2px;
+        &::after {
+          animation: nextFlip#{$x +
+            1}Backward7
+            $speed *
+            5
+            $speed *
+            -4
+            infinite
+            steps(1);
+        }
+      }
+
+      @keyframes flip#{$x+1}Backward1 {
+        0%,
+        20% {
+          transform: rotateX($bookAngle) rotateY(0deg);
+          border-radius: 0% 100% 100% 0% / 0% 2.7% 2.7% 0%;
+        }
+        80%,
+        100% {
+          transform: rotateX($bookAngle) rotateY(180deg);
+          border-radius: 0% 100% 100% 0% / 0% 2.7% 2.7% 0%;
+        }
+      }
+
+      @keyframes flip#{$x+1}Backward2 {
+        0%,
+        20% {
+          transform: rotateY(0deg) translateY(0px);
+        }
+        50% {
+          transform: rotateY(-15deg) translateY(0px);
+        }
+      }
+    }
+
+    @keyframes nextFlip#{$x+1}Backward1 {
+      @for $i from 0 through 4 {
+        #{$i * 20}% {
+          background-image: nth($images, ($x + ($x + 3)));
+          background-position: -178px -2px;
+          transform: rotateY(0deg);
+          transform-style: preserve-3d;
+        }
+        #{10+($i * 20)}% {
+          background-image: nth($images, ($x + ($x + 2)));
+          background-position: -210px -2px;
+          transform: rotateY(180deg);
+          transform-style: preserve-3d;
+        }
+      }
+    }
+
+    @for $i from 2 through 6 {
+      @keyframes nextFlip#{$x+1}Backward#{$i} {
+        @for $j from 1 through 4 {
+          #{$j * 20}% {
+            background-image: nth($images, ($x + ($x + 3)));
+            background-position: #{-148 + (($i - 2) * 30)}px -2px;
+            transform: rotateY(0deg);
+            transform-style: preserve-3d;
+          }
+          #{((10 + ($j * 20)) + (($i - 1) * 0.5))}% {
+            background-image: nth($images, ($x + ($x + 2)));
+            background-position: #{-238 - (($i - 2) * 30)}px -2px;
+            transform: rotateY(180deg);
+            transform-style: preserve-3d;
+          }
+        }
+      }
+    }
+
+    @keyframes nextFlip#{$x+1}Backward7 {
+      @for $i from 0 through 4 {
+        #{$i * 20}% {
+          background-image: nth($images, ($x + ($x + 3)));
+          background-position: -2px -2px;
+          transform: rotateY(0deg);
+          transform-style: preserve-3d;
+        }
+        #{13+($i * 20)}% {
+          background-image: nth($images, ($x + ($x + 2)));
+          background-position: -388px -2px;
+          transform: rotateY(180deg);
+          transform-style: preserve-3d;
+        }
+      }
+    }
+  }
+}
+
+/* Screen under 600 px */
+
+@media only screen and (max-width: 600px) {
+  .container {
+    height: 35vh;
+  }
+
+  .book {
+    top: 150px;
+    left: -40px;
+    transform: scale(.97);
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-height: 700px) {
+  .book {
+    top: 450px;
+    left: 0px;
+  }
+}

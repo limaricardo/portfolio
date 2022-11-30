@@ -1,0 +1,195 @@
+.formContainer {
+  background-color: #1a1d28;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer > p {
+  font-size: 2rem;
+  line-height: 3rem;
+  height: 100px;
+  color: rgb(250, 254, 255);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+}
+
+.form input,
+.form label,
+.form textarea {
+  width: 100%;
+  outline: none;
+}
+
+.form input {
+  height: 60px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.form textarea {
+  height: 200px;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.form input,
+textarea {
+  text-indent: 10px;
+  background-color: #29303e;
+  border: 1px solid #343b47;
+  color: white;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border: 1px solid rgb(108, 177, 255);
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  font-size: 1.1rem;
+}
+
+.form label {
+  text-align: left;
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.inputError {
+  border-color: rgb(253, 83, 83);
+}
+
+.error {
+  color: rgb(253, 83, 83);
+}
+
+.submitContact {
+  background-color: #215182;
+  color: white;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.4rem;
+  transition: ease-in 200ms;
+  margin-top: 40px;
+}
+
+.submitContact:hover {
+  filter: brightness(1.9);
+  color: #00091c;
+}
+
+.submitContact:disabled {
+  opacity: 0.35;
+}
+
+@media only screen and (max-width: 1400px) {
+
+  .formContainer > p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    width: 90vw;
+  }
+
+  .form {
+    width: 350px;
+  }
+
+  .form input {
+    height: 45px;
+  }
+
+  .form textarea {
+    height: 200px;
+  }
+
+  .form label {
+    font-size: 1.2rem;
+  }
+
+  .form input::placeholder,
+  .form textarea::placeholder {
+    font-size: 1rem;
+  }
+
+  .submitContact {
+    font-size: 1.3rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 1200px) and (max-height: 700px) {
+
+  .formContainer > p {
+    height: 50px;
+  }
+
+  .form {
+    width: 350px;
+  }
+
+  .form input {
+    height: 35px;
+  }
+
+  .form textarea {
+    height: 140px;
+  }
+
+  .form label {
+    font-size: 1.1rem;
+  }
+
+  .form input::placeholder,
+  .form textarea::placeholder {
+    font-size: 1rem;
+  }
+
+  .submitContact {
+    font-size: 1.3rem;
+    height: 40px;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .formContainer > p {
+    font-size: 0.95rem;
+    line-height: 2rem;
+    width: 90vw;
+  }
+
+  .form {
+    width: 250px;
+  }
+
+  .form input {
+    height: 40px;
+  }
+
+  .form textarea {
+    height: 150px;
+  }
+
+  .form label {
+    font-size: 1.1rem;
+  }
+
+  .form input::placeholder,
+  .form textarea::placeholder {
+    font-size: 0.9rem;
+  }
+}
