@@ -179,35 +179,49 @@
 }
 
 @media only screen and (max-width: 1500px) {
+
+  .flipCardContainer {
+    margin-left: auto;
+    width: 260px;
+    height: 390px;
+  }
+
   .aboutButton,
   .skillsButton {
     padding: 5px;
+    font-size: .9rem;
   }
 
   .buttonsContainer {
-    bottom: -250px;
-  }
-
-  .backButton {
-    top: -175px;
+    bottom: -215px;
   }
 
   .textContainer {
-    bottom: -245px;
-    padding: 10px 35px;
+    bottom: -205px;
+    padding: 10px 30px;
   }
 
   .textContainer p {
     font-size: 0.7rem;
   }
 
+  .textContainer span {
+    font-size: .7rem;
+  }
+
   .iconImg {
     width: 40px;
-    padding: 2px 5px;
+    padding: 5px 5px;
+  }
+
+
+  .frontButton {
+    bottom: -200px;
   }
 
   .backButton {
-    top: 10px;
+    top: -20px;
+    font-size: .9rem;
   }
 }
 
@@ -260,6 +274,7 @@
 }
 
 @media screen and (max-width: 600px) {
+
   .flipCardContainer {
     width: 200px;
     height: 300px;

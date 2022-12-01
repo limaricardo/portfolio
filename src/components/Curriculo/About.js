@@ -12,11 +12,10 @@ const About = () => {
           <br/><br/>
           Comunicativo e paixão por compartilhar conhecimento me levaram a criar
           um canal no YouTube e virar professor na BlueEdTech, onde atuo como
-          professor assistente Full-Stack.<br/><br/>Dinâmico, boa comunicação e flexível.
+          professor assistente Full-Stack meio período.<br/><br/>Dinâmico, boa comunicação e flexível.
           Procuro por desafios que me deem oportunidade de expandir meus
           conhecimentos e experiência em desenvolvimento Front-end com React /
-          TypeScript. Atualmente trabalho meio período, parte da noite, como
-          professor assistente Full-Stack na BlueEdTech.
+          TypeScript.
         </p>
       </div>
     </div>

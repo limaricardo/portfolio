@@ -2,7 +2,6 @@ import React from "react";
 import styles from '../../styles/nav.module.css';
 import { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { HashLink as Link } from "react-router-hash-link";
 import DelayedLink from "./DelayedLink";
 
 const Nav = () => {

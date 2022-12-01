@@ -7,6 +7,7 @@ import About from "./About";
 import styles from "../../styles/curriculo.module.css";
 import ProfessionalExperiences from "./Professional";
 import EducationalExperiences from "./Educational";
+import BackNav from "../Nav/BackNav";
 
 const Curriculo = () => {
   const initialState = {
@@ -27,6 +28,7 @@ const Curriculo = () => {
   return (
     <>
       <div className={styles.curriculoContainer}>
+        <BackNav />
         <header>
           <h1>Curriculo</h1>
         </header>

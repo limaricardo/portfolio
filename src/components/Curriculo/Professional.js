@@ -8,7 +8,7 @@ const ProfessionalExperiences = () => {
         <div className={styles.timelineArea}>
           <div className={styles.timelineContainer}>
             <div className={styles.timelines}>
-              <h2>Workexperience</h2>
+              <h2>Experiência Profissional</h2>
             </div>
             <div className={styles.allTimelines}>
               <div className={`${styles.singleTimeline} ${styles.dFlex2}`}>
