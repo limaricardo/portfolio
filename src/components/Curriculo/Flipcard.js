@@ -70,7 +70,7 @@ const Flipcard = () => {
                 }
                 onClick={onAboutClick}
               >
-                About me
+                Info
               </button>
               <button
                 id="skillsButton"
@@ -81,32 +81,80 @@ const Flipcard = () => {
                 }
                 onClick={onSkillClick}
               >
-                Skills
+                Tecnologias
               </button>
             </div>
             <div className={styles.textContainer}>
               {isAboutActive && (
                 <>
-                  <h4>ABOUT</h4>
-                  <p>
-                    lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum{" "}
-                  </p>
+                  <span><img className={styles.iconInfoCard} src="https://cdn-icons-png.flaticon.com/512/3870/3870998.png" alt=""/>Rio de Janeiro</span>
+                  <span><img className={styles.iconInfoCard} src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" alt=""/>limaricardop@gmail.com</span>
+                  <span><img className={styles.iconInfoCard} src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt=""/><a href="https://www.linkedin.com/in/ricardo-pereira-lima/" target="_blank">LinkedIn</a></span>
+                  
                 </>
               )}
               {isSkillActive && (
                 <>
-                  <img className={styles.iconImg} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" />
-                  <img className={styles.iconImg} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="" />
-                  <img className={styles.iconImg} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="" />
-                  <img className={styles.iconImg} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt="" />
-                  <img className={styles.iconImg} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" />
-                  <img className={styles.iconImg} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" alt="" />
-                  <img className={styles.iconImg} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="" />
-                  <img className={styles.iconImg} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" alt="" />
-                  <img className={styles.iconImg} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="" />
-                  <img className={styles.iconImg} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="" />
-                  <img className={styles.iconImg} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt="" />
-                  <img className={styles.iconImg} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="" />
+                  <img
+                    className={styles.iconImg}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt=""
+                  />
+                  <img
+                    className={styles.iconImg}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
+                    alt=""
+                  />
+                  <img
+                    className={styles.iconImg}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
+                    alt=""
+                  />
+                  <img
+                    className={styles.iconImg}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"
+                    alt=""
+                  />
+                  <img
+                    className={styles.iconImg}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                    alt=""
+                  />
+                  <img
+                    className={styles.iconImg}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
+                    alt=""
+                  />
+                  <img
+                    className={styles.iconImg}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+                    alt=""
+                  />
+                  <img
+                    className={styles.iconImg}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+                    alt=""
+                  />
+                  <img
+                    className={styles.iconImg}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                    alt=""
+                  />
+                  <img
+                    className={styles.iconImg}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                    alt=""
+                  />
+                  <img
+                    className={styles.iconImg}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
+                    alt=""
+                  />
+                  <img
+                    className={styles.iconImg}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                    alt=""
+                  />
                 </>
               )}
             </div>

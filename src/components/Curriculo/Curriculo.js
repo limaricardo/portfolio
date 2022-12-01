@@ -22,6 +22,8 @@ const Curriculo = () => {
     setInfo({ ...initialState, aboutInfo: true })
   }, [])
 
+  
+
   return (
     <>
       <div className={styles.curriculoContainer}>
@@ -36,7 +38,7 @@ const Curriculo = () => {
               Experiência Profissional
             </button>
             <button className={info.educationalInfo ? styles.infoSelected : ""} onClick={() => setInfo(state => ({ ...initialState, educationalInfo: true }))}>
-              Educação
+              Formação Acadêmica
             </button>
             <button className={info.skillsInfo ? styles.infoSelected : ""} onClick={() => setInfo(state => ({ ...initialState, skillsInfo: true }))}>
               Habilidades
@@ -50,15 +52,23 @@ const Curriculo = () => {
           </div>
           
         </div>
-        {/* <Skills /> */}
-
-        {/* <Experiences /> */}
-        {/* <div className={styles.certificates}>
-            <Certificates />
-          </div> */}
       </div>
     </>
   );
 };
 
 export default Curriculo;
+
+
+
+
+
+
+
+
+  {/* <Skills /> */}
+
+        {/* <Experiences /> */}
+        {/* <div className={styles.certificates}>
+            <Certificates />
+          </div> */}

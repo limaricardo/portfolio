@@ -27,9 +27,9 @@ const Hire = () => {
     positionYMouse = e.y;
 
     if (positionXBox === positionXMouse && positionYBox === positionYMouse) {
-      let randomTop = Math.floor(Math.random() * 80 - Math.random() * 2);
-      let randomLeft = Math.floor(Math.random() * 60 - Math.random() * 13);
-      element.style.position = "absolute";
+      let randomTop = Math.floor(Math.random() * 12 - Math.random() * 76);
+      let randomLeft = Math.floor(Math.random() * 30 - Math.random() * 58);
+      element.style.position = "relative";
       element.style.top = `${randomTop}vh`;
       element.style.left = `${randomLeft}vw`;
     }

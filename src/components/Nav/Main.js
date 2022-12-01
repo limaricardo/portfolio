@@ -15,7 +15,7 @@ export const Main = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div id="mainContainer" className={styles.container}>
       <div className={styles.snapScroll}>
         <section className={styles.curriculo} id="curriculo">
           <Curriculo />

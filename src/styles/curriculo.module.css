@@ -11,7 +11,7 @@ h6 {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(#1e3d58, rgb(0, 76, 106));
+  background: radial-gradient(#56738b, rgb(19, 60, 77));
   overflow: hidden;
 }
 
@@ -393,6 +393,7 @@ p {
     margin: 50px 0px 0px 50px;
     max-width: 700px;
   }
+  
 }
 
 @media only screen and (max-width: 600px) {
