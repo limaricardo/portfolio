@@ -1,0 +1,174 @@
+.buttonBackNavCurriculo {
+  position: relative;
+  width: 100%;
+}
+
+.buttonBackNavCurriculo img {
+  width: 50px;
+  height: 50px;
+  margin: 3px 0 0 3px;
+  cursor: pointer;
+}
+
+.buttonBackNavCurriculo button {
+  background-color: rgb(255, 255, 255);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  box-shadow: 2px 2px 15px rgb(57, 57, 57);
+  cursor: pointer;
+}
+
+.buttonBackNavContact {
+  position: relative;
+}
+
+.buttonBackNavContact img {
+  width: 50px;
+  height: 50px;
+  margin: 3px 0 0 3px;
+  cursor: pointer;
+}
+
+.buttonBackNavContact button {
+  background-color: rgb(129, 217, 255);
+  transform: rotate(-45deg);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  box-shadow: 2px 2px 15px rgb(57, 57, 57);
+  cursor: pointer;
+}
+
+.buttonBackNavProjects {
+  position: relative;
+}
+
+.buttonBackNavProjects img {
+  width: 50px;
+  height: 50px;
+  margin: 3px 0 0 3px;
+  cursor: pointer;
+}
+
+.buttonBackNavProjects button {
+  background-color: rgb(255, 243, 21);
+  transform: rotate(-90deg);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  box-shadow: 2px 2px 15px rgb(57, 57, 57);
+  cursor: pointer;
+}
+.buttonBackNavSocial {
+  position: relative;
+}
+
+.buttonBackNavSocial img {
+  width: 50px;
+  height: 50px;
+  margin: 3px 0 0 3px;
+  cursor: pointer;
+}
+
+.buttonBackNavSocial button {
+  background-color: rgb(254, 223, 253);
+  transform: rotate(180deg);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  box-shadow: 2px 2px 15px rgb(57, 57, 57);
+  cursor: pointer;
+}
+
+.buttonBackNavHire {
+  position: relative;
+}
+
+.buttonBackNavHire img {
+  width: 50px;
+  height: 50px;
+  margin: 3px 0 0 3px;
+  cursor: pointer;
+}
+
+.buttonBackNavHire button {
+  background-color: rgb(230, 223, 255);
+  transform: rotate(225deg);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  box-shadow: 2px 2px 15px rgb(57, 57, 57);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .buttonBackNavCurriculo img,
+  .buttonBackNavContact img,
+  .buttonBackNavProjects,
+  .buttonBackNavSocial img,
+  .buttonBackNavHire img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .buttonBackNavCurriculo button {
+    width: 60px;
+    height: 60px;
+    right: 10px;
+    top: 10px;
+  }
+
+  .buttonBackNavContact button {
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    top: 10px;
+  }
+
+  .buttonBackNavProjects button {
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
+  }
+
+  .buttonBackNavSocial button,
+  .buttonBackNavHire button {
+    width: 50px;
+    height: 50px;
+    left: 20px;
+    top: 20px;
+  }
+}

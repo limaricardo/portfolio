@@ -1,8 +1,12 @@
-import React from "react";
-import styles from "../../styles/curriculo.module.css";
+import React, { useEffect, useState } from "react";
+import "../../styles/buttonBack.css";
 
-const BackNav = () => {
-  const elemento = window.document.getElementById("nav");
+const BackNav = ({ className }) => {
+  const [elemento, setElemento] = useState("");
+
+  useEffect(() => {
+    setElemento(window.document.getElementById("nav"));
+  }, []);
 
   const onclick = () => {
     console.log(elemento);
@@ -16,8 +20,13 @@ const BackNav = () => {
   };
 
   return (
-    <div className={styles.buttonBackNav}>
-      <button onClick={onclick}>Voltar ao Menu</button>
+    <div className={className}>
+      <button onClick={onclick}>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/591/591855.png"
+          alt=""
+        />
+      </button>
     </div>
   );
 };

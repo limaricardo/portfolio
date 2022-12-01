@@ -7,6 +7,7 @@ import CustomInput from "./CustomInput";
 import CustomTextArea from "./CustomTextArea";
 
 import styles from "../../styles/contact.module.css";
+import BackNav from "../Nav/BackNav";
 
 const initialValues = {
   name: "",
@@ -35,48 +36,54 @@ const Contact = () => {
   };
 
   return (
-    <div className={styles.formContainer}>
-      <span>
-        Encontrou algum bug ou gostaria de entrar em contato? Preencha o formulário abaixo:
-      </span>
-      <Formik
-        initialValues={initialValues}
-        validationSchema={formSchema}
-        onSubmit={onSubmit}
-      >
-        {({ isSubmitting }) => (
-          <div className={styles.form}>
-            <Form ref={form}>
-              <CustomInput
-                label="Nome"
-                name="name"
-                type="text"
-                placeholder="Digite seu nome (opcional)."
-              />
-              <CustomInput
-                label="Email"
-                name="email"
-                type="email"
-                placeholder="Digite seu email."
-              />
-              <CustomTextArea
-                label="Comentários"
-                name="comments"
-                type="text"
-                placeholder="Insira seus comentários"
-              />
-              <button
-                disabled={isSubmitting}
-                className={styles.submitContact}
-                type="submit"
-              >
-                Submit
-              </button>
-            </Form>
-          </div>
-        )}
-      </Formik>
-    </div>
+    <>
+      <div className={styles.formWrapper}>
+        <BackNav className="buttonBackNavContact" />
+        <div className={styles.formContainer}>
+          <span>
+            Encontrou algum bug ou gostaria de entrar em contato? Preencha o
+            formulário abaixo:
+          </span>
+          <Formik
+            initialValues={initialValues}
+            validationSchema={formSchema}
+            onSubmit={onSubmit}
+          >
+            {({ isSubmitting }) => (
+              <div className={styles.form}>
+                <Form ref={form}>
+                  <CustomInput
+                    label="Nome"
+                    name="name"
+                    type="text"
+                    placeholder="Digite seu nome (opcional)."
+                  />
+                  <CustomInput
+                    label="Email"
+                    name="email"
+                    type="email"
+                    placeholder="Digite seu email."
+                  />
+                  <CustomTextArea
+                    label="Comentários"
+                    name="comments"
+                    type="text"
+                    placeholder="Insira seus comentários"
+                  />
+                  <button
+                    disabled={isSubmitting}
+                    className={styles.submitContact}
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                </Form>
+              </div>
+            )}
+          </Formik>
+        </div>
+      </div>
+    </>
   );
 };
 

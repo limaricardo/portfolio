@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../styles/projects.scss";
+import BackNav from "../Nav/BackNav";
 
 const Projects = () => {
   const images = [
@@ -194,6 +195,7 @@ const Projects = () => {
 
   return (
     <div id="projects">
+      <BackNav className="buttonBackNavProjects"/>
       <div className="container">
         <div id="book" className="book">
           <div className="pages">

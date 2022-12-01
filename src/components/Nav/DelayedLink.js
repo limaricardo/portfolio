@@ -8,7 +8,6 @@ const DelayedLink = ({ delay, to, id, ...props }) => {
   const clickHandler = (e) => {
     e.preventDefault();
     const elemento = document.getElementById(id);
-    const buttonExplode = document.getElementById("boxExplode");
 
     console.log(elemento)
 
@@ -19,13 +18,7 @@ const DelayedLink = ({ delay, to, id, ...props }) => {
         inline: "start",
       });
     }, delay);
-
-    if(id === "projects2") {
-      setTimeout(() => {
-        buttonExplode.focus();
-      }, 1100)
-    }
-    
+  
   };
 
   return <Link to={to} {...props} onClick={clickHandler} />;

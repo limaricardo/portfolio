@@ -1,3 +1,8 @@
+.hireWrapper {
+  width: 100%;
+  height: 100%;
+}
+
 .hireContainer {
   text-align: center;
   width: 100%;
@@ -60,17 +65,16 @@
   filter: brightness(1.8);
 }
 
-/* Screen under 1400 px */
 
-@media only screen and (max-width: 1400px) {
-  .hireWrapper {
-    width: 40vw;
-  }
-}
-
-/* Screen under 900px */
+/* Screen under 1200px */
 
 @media only screen and (max-width: 1200px) {
+
+  .hireWrapper {
+    width: 100%;
+    height: 100%;
+  }
+
   .question {
     display: flex;
     flex-direction: column;
@@ -97,4 +101,7 @@
     cursor: pointer;
   }
 }
+
+
+
 

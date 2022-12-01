@@ -24,11 +24,10 @@ const Curriculo = () => {
   }, [])
 
   
-
   return (
     <>
       <div className={styles.curriculoContainer}>
-        <BackNav />
+        <BackNav className="buttonBackNavCurriculo" />
         <header>
           <h1>Curriculo</h1>
         </header>
@@ -64,13 +63,3 @@ export default Curriculo;
 
 
 
-
-
-
-
-  {/* <Skills /> */}
-
-        {/* <Experiences /> */}
-        {/* <div className={styles.certificates}>
-            <Certificates />
-          </div> */}

@@ -226,21 +226,6 @@ p {
   margin-right: 10px;
 }
 
-.buttonBackNav button {
-  background-color: rgb(0, 0, 0);
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  color: rgb(255, 255, 255);
-  font-weight: 700;
-  font-size: 1.2rem;
-  border: none;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  box-shadow: 2px 2px 15px rgb(255, 255, 255);
-}
-
 /* Screen under 1500 px */
 
 @media only screen and (max-width: 1500px) {
@@ -544,15 +529,5 @@ p {
   .skillsDiv {
     width: 100%;
     gap: 65px;
-  }
-
-  .buttonBackNav button {
-    background-color: rgb(186, 242, 255);
-    color: black;
-    width: 60px;
-    height: 60px;
-    font-size: .5rem;
-    top: 10px;
-    right: 10px;
   }
 }

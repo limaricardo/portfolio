@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/hire.module.css";
+import BackNav from "../Nav/BackNav";
 
 const Hire = () => {
   const [element, setElement] = useState(null);
@@ -51,22 +52,25 @@ const Hire = () => {
     }, 500);
   };
   return (
-    <div id="hire" className={styles.hireContainer}>
-      <div className={styles.question}>
-        <p>Gostou do portfólio e gostaria de entrar em contato?</p>
-        <span>
-          O <span style={{ color: "lightgreen" }}>SIM</span> irá te redirecionar
-          para o formulário de feedbacks. <br /> O{" "}
-          <span style={{ color: "red" }}>NÃO</span>, o não ... Vocês terão que
-          descobrir hehehe
-        </span>
-      </div>
-      <div className={styles.buttonWrapper}>
-        <div id="divButtonYes" className={styles.divButtonYes}>
-          <button onClick={onYesClick}>Sim</button>
+    <div id="hire" className={styles.hireWrapper}>
+      <BackNav className="buttonBackNavHire" />
+      <div id="hire" className={styles.hireContainer}>
+        <div className={styles.question}>
+          <p>Gostou do portfólio e gostaria de entrar em contato?</p>
+          <span>
+            O <span style={{ color: "lightgreen" }}>SIM</span> irá te
+            redirecionar para o formulário de feedbacks. <br /> O{" "}
+            <span style={{ color: "red" }}>NÃO</span>, o não ... Vocês terão que
+            descobrir hehehe
+          </span>
         </div>
-        <div id="divButtonNo" className={styles.divButtonNo}>
-          <button onClick={onNoClick}>Não</button>
+        <div className={styles.buttonWrapper}>
+          <div id="divButtonYes" className={styles.divButtonYes}>
+            <button onClick={onYesClick}>Sim</button>
+          </div>
+          <div id="divButtonNo" className={styles.divButtonNo}>
+            <button onClick={onNoClick}>Não</button>
+          </div>
         </div>
       </div>
     </div>

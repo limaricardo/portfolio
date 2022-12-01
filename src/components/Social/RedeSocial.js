@@ -2,10 +2,12 @@ import React from "react";
 import styles from "../../styles/social.module.css";
 import mockup from "../../assets/mockup.png";
 import insta from "../../assets/insta.png";
+import BackNav from "../Nav/BackNav";
 
 const RedeSocial = () => {
   return (
     <div className={styles.socialContainer}>
+      <BackNav className="buttonBackNavSocial"/>
       <img src={mockup} className={styles.mockupImg} alt=""></img>
       <img src={insta} className={styles.instaImg} alt="" />
       <ul>
