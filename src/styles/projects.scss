@@ -606,8 +606,10 @@ $imagesReverse: url("https://i.imgur.com/mhHUaIP.png"),
   }
 
   .book {
-    top: 250px;
-  }
+    top: 185px;
+    right: -3px;
+    transform: scale(1.8);
+}
 
   .pages,
   .flips,
@@ -955,7 +957,7 @@ $imagesReverse: url("https://i.imgur.com/mhHUaIP.png"),
   .book {
     top: 150px;
     left: -40px;
-    transform: scale(.97);
+    transform: scale(0.97);
   }
 }
 
@@ -963,5 +965,21 @@ $imagesReverse: url("https://i.imgur.com/mhHUaIP.png"),
   .book {
     top: 285px;
     left: 0px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .book {
+    transform: scale(0.8);
+    top: 160px;
+    left: -8px;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .book {
+    transform: scale(0.6);
+    top: 200px;
+    left: -60px;
   }
 }

@@ -20,6 +20,9 @@ const Hire = () => {
     element.addEventListener("mousemove", (e) => {
       positionXBox = e.x;
       positionYBox = e.y;
+
+      console.log(positionXBox)
+      console.log(positionYBox)
     });
   }
 
