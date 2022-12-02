@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../styles/projects.scss";
+import "../../styles/buttonBack.css"
 import BackNav from "../Nav/BackNav";
 
 const Projects = () => {
