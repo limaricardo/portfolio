@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "../../styles/hire.module.css";
 import BackNav from "../Nav/BackNav";
 import HireModal from "./HireModal";
+import HireModalFree from "./HireModalFree";
 
 const Hire = () => {
   const [element, setElement] = useState(null);
@@ -9,8 +10,8 @@ const Hire = () => {
   const [isStillOnPage, setIsStillOnPage] = useState(false);
 
   let [counter, setCounter] = useState(0);
-  console.log(counter)
-  console.log(isStillOnPage)
+  console.log(counter);
+  console.log(isStillOnPage);
 
   const contact = document.getElementById("contact");
 
@@ -47,7 +48,8 @@ const Hire = () => {
         setShowModal(true);
         element.style.display = "none";
       } else if (counter > 10 && isStillOnPage) {
-        setShowModal(true)
+        element.style.display = "none";
+        setShowModal(true);
       }
     }
   });
@@ -89,13 +91,21 @@ const Hire = () => {
             isStillOnPage={isStillOnPage}
             setIsStillOnPage={setIsStillOnPage}
             element={element}
+            contact={contact}
           />
         )}
-        {
-          counter > 10 && showModal && isStillOnPage && (
-            <HireModal />
-          )
-        }
+        {counter > 10 && showModal && isStillOnPage && (
+          <HireModalFree
+            counter={counter}
+            setCounter={setCounter}
+            showModal={showModal}
+            setShowModal={setShowModal}
+            isStillOnPage={isStillOnPage}
+            setIsStillOnPage={setIsStillOnPage}
+            element={element}
+            contact={contact}
+          />
+        )}
         <div className={styles.buttonWrapper}>
           <div id="divButtonYes" className={styles.divButtonYes}>
             <button onClick={onYesClick}>Sim</button>
