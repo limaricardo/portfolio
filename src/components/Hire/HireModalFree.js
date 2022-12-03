@@ -56,7 +56,7 @@ const HireModalFree = ({
             </div>
             <div id="divButtonYes" className={styles.divButtonFreeYes}>
               <button onClick={onRedirectPageClick}>
-                Eu gostei, só cheguei aqui pelo desafio.
+                Sim, gostei!
               </button>
             </div>
           </div>

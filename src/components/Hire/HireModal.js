@@ -47,7 +47,7 @@ const HireModal = ({
               <div id="divButtonNo" className={styles.divButtonModalNo}>
                 <button onClick={onStillPageClick}>Continuar</button>
               </div>
-              <div id="divButtonYes" className={styles.divButtonFreeYes}>
+              <div id="divButtonYes" className={styles.divButtonModalYes}>
                 <button onClick={onRedirectPageClick}>Ir para formulário</button>
               </div>
             </div>
