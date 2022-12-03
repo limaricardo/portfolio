@@ -107,7 +107,10 @@
 }
 
 .buttonBackNavHire {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999;
 }
 
 .buttonBackNavHire img {
@@ -127,7 +130,7 @@
   font-size: 1.2rem;
   border: none;
   position: absolute;
-  left: 30px;
+  left: 20px;
   top: 20px;
   box-shadow: 2px 2px 15px rgb(57, 57, 57);
   cursor: pointer;
