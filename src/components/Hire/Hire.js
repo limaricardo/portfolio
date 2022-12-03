@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/hire.module.css";
 import BackNav from "../Nav/BackNav";
+import HireModal from "./HireModal";
 
 const Hire = () => {
   const [element, setElement] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [isStillOnPage, setIsStillOnPage] = useState(false);
+
+  let [counter, setCounter] = useState(0);
+  console.log(counter)
+  console.log(isStillOnPage)
 
   const contact = document.getElementById("contact");
 
@@ -20,9 +27,6 @@ const Hire = () => {
     element.addEventListener("mousemove", (e) => {
       positionXBox = e.x;
       positionYBox = e.y;
-
-      console.log(positionXBox)
-      console.log(positionYBox)
     });
   }
 
@@ -34,8 +38,17 @@ const Hire = () => {
       let randomTop = Math.floor(Math.random() * 12 - Math.random() * 76);
       let randomLeft = Math.floor(Math.random() * 30 - Math.random() * 58);
       element.style.position = "relative";
+      element.style.display = "block";
       element.style.top = `${randomTop}vh`;
       element.style.left = `${randomLeft}vw`;
+      setCounter(counter + 1);
+
+      if (counter > 5 && !isStillOnPage) {
+        setShowModal(true);
+        element.style.display = "none";
+      } else if (counter > 10 && isStillOnPage) {
+        setShowModal(true)
+      }
     }
   });
 
@@ -67,6 +80,22 @@ const Hire = () => {
             descobrir hehehe
           </span>
         </div>
+        {counter > 5 && showModal && !isStillOnPage && (
+          <HireModal
+            counter={counter}
+            setCounter={setCounter}
+            showModal={showModal}
+            setShowModal={setShowModal}
+            isStillOnPage={isStillOnPage}
+            setIsStillOnPage={setIsStillOnPage}
+            element={element}
+          />
+        )}
+        {
+          counter > 10 && showModal && isStillOnPage && (
+            <HireModal />
+          )
+        }
         <div className={styles.buttonWrapper}>
           <div id="divButtonYes" className={styles.divButtonYes}>
             <button onClick={onYesClick}>Sim</button>
