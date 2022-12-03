@@ -29,7 +29,7 @@ const Curriculo = () => {
       <div className={styles.curriculoContainer}>
         <BackNav className="buttonBackNavCurriculo" />
         <header>
-          <h1>Curriculo</h1>
+          <h1>Currículo</h1>
         </header>
         <div className={styles.experiencesSection}>
           <Flipcard />

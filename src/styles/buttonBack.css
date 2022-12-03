@@ -172,4 +172,8 @@
     left: 20px;
     top: 20px;
   }
+
+  .buttonBackNavProjects img {
+    margin-top: 5px;
+  }
 }

@@ -39,8 +39,8 @@ const Nav = () => {
       <div className={styles.navContainer}>
         <ul>
           <li id="curriculoLi" style={{zIndex: 5}} onClick={onClickClass} className={clicked === "curriculoLi" ? styles.liClickedCurriculo : styles.liHover}>
-            <DelayedLink delay={600} to='#curriculo' id="curriculo">
-              Curriculo
+            <DelayedLink delay={1000} to='#curriculo' id="curriculo">
+              Currículo
             </DelayedLink>
           </li>
 
@@ -50,21 +50,22 @@ const Nav = () => {
             </DelayedLink>
           </li>
 
-          <li id="contactLi" style={{zIndex: 3}} onClick={onClickClass} className={clicked === "contactLi" ? styles.liClickedContact : styles.liHover}>
+          <li id="projectsLi" style={{zIndex: 3}} onClick={onClickClass} className={clicked === "projectsLi" ? styles.liClickedProjects : styles.liHover}>
+            <DelayedLink delay={600} to='#projects2' id="projects2">
+              Projetos
+            </DelayedLink>  
+          </li>
+
+          <li id="contactLi" style={{zIndex: 2}} onClick={onClickClass} className={clicked === "contactLi" ? styles.liClickedContact : styles.liHover}>
             <DelayedLink delay={600} to='#contact' id="contact">
               Contato
             </DelayedLink>  
           </li>
 
-          <li id="projectsLi" style={{zIndex: 2}} onClick={onClickClass} className={clicked === "projectsLi" ? styles.liClickedProjects : styles.liHover}>
-          <DelayedLink delay={600} to='#projects2' id="projects2">
-            Projects
-          </DelayedLink>  
-          </li>
 
           <li id="hireLi" style={{zIndex: 1}} onClick={onClickClass} className={clicked === "hireLi" ? styles.liClickedHire : clicked === "projectsLi" ? "" : styles.liHover}>
           <DelayedLink delay={600} to='#hire' id="hire">
-            Hire me!
+            Contrate-me
           </DelayedLink> 
           </li>
         </ul>

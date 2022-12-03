@@ -15,20 +15,23 @@ h6 {
   overflow: hidden;
 }
 
+.curriculoContainer header {
+  width: 100%;
+  text-align: left;
+  font-size: 0.4rem;
+  height: 10vh;
+  text-align: center;
+}
+
 .curriculoContainer h1 {
   color: rgb(252, 252, 252);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif,
     Courier, monospace;
   font-size: 5rem;
+  margin-top: 20px;
+  color: rgb(221, 250, 255);
 }
 
-.curriculoContainer header {
-  width: 100%;
-  text-align: left;
-  font-size: 0.4rem;
-  padding-left: 20px;
-  height: 10vh;
-}
 
 .experiencesSection {
   display: flex;

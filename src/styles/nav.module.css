@@ -65,6 +65,25 @@ body {
   }
 } 
 
+
+.navContainer .liClickedCurriculo {
+  animation: liClickedCurriculo 2s;
+}
+
+@keyframes liClickedCurriculo {
+  0% {
+    transform: translateX(-50px);
+  }
+  50% {
+    transform: translateX(180px);
+    opacity: 0.7;
+  }
+  100%{
+    transform: translateX(-1500px);
+    opacity: 0;
+  }
+} 
+
 .navContainer .liClickedProjects {
   animation-name: liClickedProjects;
   animation-duration: 2s;
