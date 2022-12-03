@@ -44,10 +44,10 @@ const Hire = () => {
       element.style.left = `${randomLeft}vw`;
       setCounter(counter + 1);
 
-      if (counter > 5 && !isStillOnPage) {
+      if (counter > 50 && !isStillOnPage) {
         setShowModal(true);
         element.style.display = "none";
-      } else if (counter > 10 && isStillOnPage) {
+      } else if (counter > 100 && isStillOnPage) {
         element.style.display = "none";
         setShowModal(true);
       }
@@ -82,7 +82,7 @@ const Hire = () => {
             descobrir hehehe
           </span>
         </div>
-        {counter > 5 && showModal && !isStillOnPage && (
+        {counter > 50 && showModal && !isStillOnPage && (
           <HireModal
             counter={counter}
             setCounter={setCounter}
@@ -94,7 +94,7 @@ const Hire = () => {
             contact={contact}
           />
         )}
-        {counter > 10 && showModal && isStillOnPage && (
+        {counter > 100 && showModal && isStillOnPage && (
           <HireModalFree
             counter={counter}
             setCounter={setCounter}
