@@ -54,12 +54,6 @@ const Hire = () => {
     }
   });
 
-  const onNoClick = () => {
-    window.alert(
-      "Parabéns pela insistência, você será redirecionado para deixar um feedback. Obrigado!"
-    );
-  };
-
   const onYesClick = () => {
     setTimeout(() => {
       contact.scrollIntoView({
@@ -111,7 +105,7 @@ const Hire = () => {
             <button onClick={onYesClick}>Sim</button>
           </div>
           <div id="divButtonNo" className={styles.divButtonNo}>
-            <button onClick={onNoClick}>Não</button>
+            <button>Não</button>
           </div>
         </div>
       </div>
