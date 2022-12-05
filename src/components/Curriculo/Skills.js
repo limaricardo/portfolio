@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/curriculo.module.css";
+import { i18n } from "../../Translate/i18n";
 
 const Skills = () => {
   return (
@@ -14,105 +15,105 @@ const Skills = () => {
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            HTML
+            {i18n.t('curriculum.messages.skills.skill1')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            CSS
+            {i18n.t('curriculum.messages.skills.skill2')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            JavaScript
+            {i18n.t('curriculum.messages.skills.skill3')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            TypeScript
+            {i18n.t('curriculum.messages.skills.skill4')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            ReactJS
+           {i18n.t('curriculum.messages.skills.skill5')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            Node.js
+            {i18n.t('curriculum.messages.skills.skill6')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            Jest
+            {i18n.t('curriculum.messages.skills.skill7')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            SOLID
+            {i18n.t('curriculum.messages.skills.skill8')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            Sass
+            {i18n.t('curriculum.messages.skills.skill9')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            SQL
+            {i18n.t('curriculum.messages.skills.skill10')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            Git
+            {i18n.t('curriculum.messages.skills.skill11')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            GitHub
+            {i18n.t('curriculum.messages.skills.skill12')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            C#
+            {i18n.t('curriculum.messages.skills.skill13')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            Electron
+            {i18n.t('curriculum.messages.skills.skill14')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            SCRUM
+            {i18n.t('curriculum.messages.skills.skill15')}
           </p>
         </div>
         <div className={styles.idiomas}>
@@ -122,21 +123,21 @@ const Skills = () => {
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            Português - Nativo
+            {i18n.t('curriculum.messages.idiom.idiom1')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            Inglês - Avançado
+            {i18n.t('curriculum.messages.idiom.idiom2')}
           </p>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"
               alt=""
             />
-            Alemão - Básico
+            {i18n.t('curriculum.messages.idiom.idiom3')}
           </p>
         </div>
       </div>

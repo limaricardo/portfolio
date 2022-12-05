@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/flipcard.module.css";
+import { i18n } from "../../Translate/i18n";
 
 const Flipcard = () => {
   const [pageLoad, setPageLoad] = useState(false);
@@ -54,7 +55,7 @@ const Flipcard = () => {
               className={styles.frontButton}
               onClick={onFrontClick}
             >
-              Sobre mim
+              {i18n.t('curriculum.messages.flipCard.aboutMe')}
             </button>
           </div>
         </div>
@@ -70,7 +71,7 @@ const Flipcard = () => {
                 }
                 onClick={onAboutClick}
               >
-                Info
+                {i18n.t('curriculum.messages.flipCard.info')}
               </button>
               <button
                 id="skillsButton"
@@ -81,7 +82,7 @@ const Flipcard = () => {
                 }
                 onClick={onSkillClick}
               >
-                Tecnologias
+                {i18n.t('curriculum.messages.flipCard.technologies')}
               </button>
             </div>
             <div className={styles.textContainer}>
@@ -164,7 +165,7 @@ const Flipcard = () => {
               className={styles.backButton}
               onClick={onBackClick}
             >
-              Voltar ao perfil
+              {i18n.t('curriculum.messages.flipCard.backToProfile')}
             </button>
           </div>
         </div>

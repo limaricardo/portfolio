@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/curriculo.module.css";
+import { i18n } from "../../Translate/i18n";
 
 const ProfessionalExperiences = () => {
   return (
@@ -18,8 +19,7 @@ const ProfessionalExperiences = () => {
                   }`}
                 >
                   <span>
-                    <h6>Julho 2022 - atual</h6> — Desenvolvedor Front-End
-                    (Wexpert Consulting)
+                    <h6>{i18n.t('curriculum.messages.professional.firstH6')}</h6>{i18n.t('curriculum.messages.professional.firstTxt')}
                   </span>
                   <div className={styles.tSquare}></div>
                 </div>
@@ -27,8 +27,7 @@ const ProfessionalExperiences = () => {
               <div className={`${styles.singleTimeline} ${styles.dFlex2}`}>
                 <div className={`${styles.timelineText} ${styles.dFlex2}`}>
                   <span>
-                    <h6>Junho 2022 - atual</h6> — Professor Full-Stack
-                    assistente (Blue EdTech)
+                    <h6>{i18n.t('curriculum.messages.professional.secondH6')}</h6>{i18n.t('curriculum.messages.professional.secondTxt')}
                   </span>
                   <div className={styles.tSquare}></div>
                 </div>
@@ -36,8 +35,7 @@ const ProfessionalExperiences = () => {
               <div className={`${styles.singleTimeline} ${styles.dFlex2}`}>
                 <div className={`${styles.timelineText} ${styles.dFlex2}`}>
                   <span>
-                    <h6>Abril 2020 - Outubro 2022</h6> — Rater Web (Telus
-                    International)
+                    <h6>{i18n.t('curriculum.messages.professional.thirdH6')}</h6>{i18n.t('curriculum.messages.professional.thirdTxt')}
                   </span>
                   <div className={styles.tSquare}></div>
                 </div>
@@ -45,8 +43,7 @@ const ProfessionalExperiences = () => {
               <div className={`${styles.singleTimeline} ${styles.dFlex2}`}>
                 <div className={`${styles.timelineText} ${styles.dFlex2}`}>
                   <span>
-                    <h6>Julho 2019 - Abril 2020</h6> — Search Engine Evaluator
-                    (Appen)
+                    <h6>{i18n.t('curriculum.messages.professional.fourthH6')}</h6>{i18n.t('curriculum.messages.professional.fourthTxt')}
                   </span>
                   <div className={styles.tSquare}></div>
                 </div>
@@ -54,8 +51,7 @@ const ProfessionalExperiences = () => {
               <div className={`${styles.singleTimeline} ${styles.dFlex2}`}>
                 <div className={`${styles.timelineText} ${styles.dFlex2}`}>
                   <span>
-                    <h6>Março 2018 - Novembro 2018 </h6> — Controlador de
-                    Aspecto (Groupe PSA)
+                    <h6>{i18n.t('curriculum.messages.professional.fifthH6')}</h6>{i18n.t('curriculum.messages.professional.fifthTxt')}
                   </span>
                   <div className={styles.tSquare}></div>
                 </div>
@@ -63,8 +59,7 @@ const ProfessionalExperiences = () => {
               <div className={`${styles.singleTimeline} ${styles.dFlex2}`}>
                 <div className={`${styles.timelineText} ${styles.dFlex2}`}>
                   <span>
-                    <h6>Setembro 2016 - Dezembro 2017</h6> — Estagiário de
-                    engenharia de processos (Faurecia Automotive)
+                    <h6>{i18n.t('curriculum.messages.professional.sixthH6')}</h6>{i18n.t('curriculum.messages.professional.sixthTxt')}
                   </span>
                   <div className={styles.tSquare}></div>
                 </div>

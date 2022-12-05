@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const App = () => {
-  
+
   return (
     <div className="App">
       <Main></Main>
