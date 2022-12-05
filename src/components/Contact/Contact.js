@@ -7,6 +7,7 @@ import CustomInput from "./CustomInput";
 import CustomTextArea from "./CustomTextArea";
 
 import styles from "../../styles/contact.module.css";
+import { i18n } from "../../Translate/i18n";
 import BackNav from "../Nav/BackNav";
 
 const initialValues = {
@@ -40,10 +41,9 @@ const Contact = () => {
       <div className={styles.formWrapper}>
         <BackNav className="buttonBackNavContact" />
         <div className={styles.formContainer}>
-          <span>
-            Encontrou algum bug ou gostaria de entrar em contato? Preencha o
-            formulário abaixo:
-          </span>
+          <h1>
+          {i18n.t('contact.title')}
+          </h1>
           <Formik
             initialValues={initialValues}
             validationSchema={formSchema}
@@ -53,29 +53,29 @@ const Contact = () => {
               <div className={styles.form}>
                 <Form ref={form}>
                   <CustomInput
-                    label="Nome"
+                    label={i18n.t('contact.labels.name')}
                     name="name"
                     type="text"
-                    placeholder="Digite seu nome (opcional)."
+                    placeholder={i18n.t('contact.placeholders.name')}
                   />
                   <CustomInput
-                    label="Email"
+                    label={i18n.t('contact.labels.email')}
                     name="email"
                     type="email"
-                    placeholder="Digite seu email."
+                    placeholder={i18n.t('contact.placeholders.email')}
                   />
                   <CustomTextArea
-                    label="Comentários"
+                    label={i18n.t('contact.labels.comments')}
                     name="comments"
                     type="text"
-                    placeholder="Insira seus comentários"
+                    placeholder={i18n.t('contact.placeholders.comments')}
                   />
                   <button
                     disabled={isSubmitting}
                     className={styles.submitContact}
                     type="submit"
                   >
-                    Submit
+                    {i18n.t('contact.submitBtn')}
                   </button>
                 </Form>
               </div>

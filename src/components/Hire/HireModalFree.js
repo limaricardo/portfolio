@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/hire.module.css";
+import { i18n } from "../../Translate/i18n";
 
 const HireModalFree = ({
   counter,
@@ -44,19 +45,18 @@ const HireModalFree = ({
   return (
     <div className={styles.hireModal}>
       <div className={styles.hireModalContainer}>
-        <p>Uhuuuuuul!!! Você não desiste mesmo em ?!</p>
+        <p>{i18n.t("hire.secondModal.firstTxt")}</p>
         <p>
-          Qualquer uma das opções agora irá te redirecionar para página de
-          feedback. E aí, curtiu a experiência?
+        {i18n.t("hire.secondModal.secondTxt")}
         </p>
         <div className={styles.buttonsModalDiv}>
           <div className={styles.buttonWrapperFree}>
             <div id="divButtonNo" className={styles.divButtonFreeNo}>
-              <button onClick={onNoButtonClick}>Não</button>
+              <button onClick={onNoButtonClick}>{i18n.t("hire.secondModal.noBtn")}</button>
             </div>
             <div id="divButtonYes" className={styles.divButtonFreeYes}>
               <button onClick={onRedirectPageClick}>
-                Sim, gostei!
+              {i18n.t("hire.secondModal.likeBtn")}
               </button>
             </div>
           </div>

@@ -3,15 +3,18 @@ import styles from "../../styles/nav.module.css";
 import { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import DelayedLink from "./DelayedLink";
+import { i18n } from "../../Translate/i18n";
+
+const I18N_STORAGE_KEY = "i18nextLng";
 
 const Nav = () => {
   const [clicked, setClicked] = useState(false);
   const [isSocialClicked, setIsSocialClicked] = useState(false);
+  const [language] = useState(localStorage.getItem(I18N_STORAGE_KEY));
 
-  const I18N_STORAGE_KEY = 'i18nextLng'
+  console.log(language);
 
   const onClickClass = (e) => {
-    console.log(e.currentTarget.id);
     setClicked(e.currentTarget.id);
 
     setTimeout(() => {
@@ -20,7 +23,6 @@ const Nav = () => {
   };
 
   const onClickSocial = (e) => {
-    console.log(e.currentTarget.id);
     setClicked(e.currentTarget.id);
     setIsSocialClicked(true);
 
@@ -30,25 +32,55 @@ const Nav = () => {
     }, 2000);
   };
 
-  console.log(clicked);
+  const onPortugueseClick = () => {
+    window.localStorage.setItem(I18N_STORAGE_KEY, "pt-BR");
 
-  const handleSelectChange = (e) => {
-    window.localStorage.setItem(
-      I18N_STORAGE_KEY,
-      e.target.value
-    );
-    window.location = window.location
+    window.location = window.location;
+  };
+
+  const onEnglishClick = () => {
+    window.localStorage.setItem(I18N_STORAGE_KEY, "en-US");
+
+    window.location = window.location;
   };
 
   return (
     <>
       <BrowserRouter>
         <div className={styles.navContainer}>
-          <select onChange={handleSelectChange}>
-            <option>Selecione um idioma</option>
-            <option value="pt-BR">PT</option>
-            <option value="en-US">EN</option>
-          </select>
+          <div className={styles.languageSelect}>
+            <span>{i18n.t("nav.legend.select")}</span>
+            <div className={styles.languages}>
+              <div
+                className={
+                  language === "pt-BR"
+                    ? `${styles.portuguese} ${styles.activePortuguese}`
+                    : `${styles.portuguese} ${styles.disabled}`
+                }
+                onClick={onPortugueseClick}
+              >
+                <img
+                  src="https://i.imgur.com/5Afpluz.png"
+                  alt="Brazilian Flag"
+                />
+                <span value="pt-BR">{i18n.t("nav.legend.pt")}</span>
+              </div>
+              <div
+                className={
+                  language === "en-US"
+                    ? `${styles.english} ${styles.activeEnglish}`
+                    : `${styles.english} ${styles.disabled}`
+                }
+                onClick={onEnglishClick}
+              >
+                <img
+                  src="https://i.imgur.com/C98nH9F.png"
+                  alt="Brazilian Flag"
+                />
+                <span value="en-US">{i18n.t("nav.legend.en")}</span>
+              </div>
+            </div>
+          </div>
           <ul>
             <li
               id="curriculoLi"
@@ -61,7 +93,7 @@ const Nav = () => {
               }
             >
               <DelayedLink delay={1000} to="#curriculo" id="curriculo">
-                Currículo
+                {i18n.t("nav.curriculum")}
               </DelayedLink>
             </li>
 
@@ -76,7 +108,7 @@ const Nav = () => {
               }
             >
               <DelayedLink delay={1000} to="#redeSocial" id="redeSocial">
-                Redes Sociais
+                {i18n.t("nav.social")}
               </DelayedLink>
             </li>
 
@@ -91,7 +123,7 @@ const Nav = () => {
               }
             >
               <DelayedLink delay={600} to="#projects2" id="projects2">
-                Projetos
+                {i18n.t("nav.projects")}
               </DelayedLink>
             </li>
 
@@ -106,7 +138,7 @@ const Nav = () => {
               }
             >
               <DelayedLink delay={600} to="#contact" id="contact">
-                Contato
+                {i18n.t("nav.contact")}
               </DelayedLink>
             </li>
 
@@ -123,7 +155,7 @@ const Nav = () => {
               }
             >
               <DelayedLink delay={600} to="#hire" id="hire">
-                Contrate-me
+                {i18n.t("nav.hire")}
               </DelayedLink>
             </li>
           </ul>

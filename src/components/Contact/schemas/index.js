@@ -1,7 +1,8 @@
 import * as yup from "yup";
+import { i18n } from "../../../Translate/i18n";
 
 export const formSchema = yup.object().shape({
-  email: yup.string().email("Please enter a valid email").required("Campo obrigatório"),
+  email: yup.string().email(i18n.t('yupValidation.emailValid')).required(i18n.t('yupValidation.emailRequired')),
   name: yup.string(),
-  comments: yup.string().required("Por favor, insira algum comentário antes de enviar.")
+  comments: yup.string().required(i18n.t('yupValidation.commentsRequired'))
 })

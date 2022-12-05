@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/hire.module.css";
+import { i18n } from "../../Translate/i18n";
 
 const HireModal = ({
   counter,
@@ -36,19 +37,20 @@ const HireModal = ({
   return (
     <div className={styles.hireModal}>
       <div className={styles.hireModalContainer}>
-        <p>Parabéns pela persistência em clicar no botão "Não".</p>
-        <p>
-          Se tentar mais algumas vezes prometo liberar o clique. Deseja
-          continuar tentando ou ser redirecionado para o formulário de contato?
-        </p>
+        <p>{i18n.t("hire.firstModal.firstTxt")}</p>
+        <p>{i18n.t("hire.firstModal.secondTxt")}</p>
         <div className={styles.buttonsModalDiv}>
           <div className={styles.buttonsModalDiv}>
             <div className={styles.buttonWrapperFree}>
               <div id="divButtonNo" className={styles.divButtonModalNo}>
-                <button onClick={onStillPageClick}>Continuar</button>
+                <button onClick={onStillPageClick}>
+                  {i18n.t("hire.firstModal.continueBtn")}
+                </button>
               </div>
               <div id="divButtonYes" className={styles.divButtonModalYes}>
-                <button onClick={onRedirectPageClick}>Ir para formulário</button>
+                <button onClick={onRedirectPageClick}>
+                  {i18n.t("hire.firstModal.formBtn")}
+                </button>
               </div>
             </div>
           </div>

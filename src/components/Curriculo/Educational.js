@@ -8,7 +8,7 @@ const EducationalExperiences = () => {
       <div className={styles.timelineArea}>
         <div className={styles.timelineContainer}>
           <div className={styles.timelines}>
-            <h2>Formação Acadêmica</h2>
+            <h2>{i18n.t('curriculum.subtitles.education')}</h2>
           </div>
           <div className={styles.allTimelines}>
             <div className={`${styles.singleTimeline} ${styles.dFlex2}`}>

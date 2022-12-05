@@ -6,14 +6,10 @@ const Flipcard = () => {
   const [pageLoad, setPageLoad] = useState(false);
   const [isAboutActive, setisAboutActive] = useState(true);
   const [isSkillActive, setisSkillActive] = useState(false);
-  console.log(isAboutActive);
-  console.log(isSkillActive);
 
   useEffect(() => {
     setPageLoad(true);
   }, []);
-
-  console.log(document.getElementById("aboutButton"));
 
   const flipCard = document.getElementById("flipCard");
 

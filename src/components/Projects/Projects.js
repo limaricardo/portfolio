@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../../styles/projects.scss";
-import "../../styles/buttonBack.css"
+import "../../styles/buttonBack.css";
+import { i18n } from "../../Translate/i18n";
 import BackNav from "../Nav/BackNav";
 
 const Projects = () => {
@@ -60,8 +61,6 @@ const Projects = () => {
   const [pageLoad, setPageLoad] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
-  console.log(currentPage);
-
   useEffect(() => {
     setCurrentPage(0);
     setPageLoad(true);
@@ -120,7 +119,6 @@ const Projects = () => {
   };
 
   const onBackClick = () => {
-    console.log(currentPage);
     setIsClicked(true);
 
     for (let i = 1; i <= 7; i++) {
@@ -136,7 +134,6 @@ const Projects = () => {
     }
 
     for (let i = 0; i < 13; i++) {
-      console.log(currentPage, "ALO");
       if (currentPage + 1 === i) {
         setTimeout(() => {
           page6.style.backgroundImage = imagesReverse[currentPage * 2 - 2];
@@ -173,7 +170,6 @@ const Projects = () => {
     }
 
     for (let i = 0; i < 13; i++) {
-      console.log(currentPage);
       if (currentPage === i) {
         setTimeout(() => {
           page3.style.backgroundImage = images[currentPage + (currentPage + 1)];
@@ -196,7 +192,7 @@ const Projects = () => {
 
   return (
     <div id="projects">
-      <BackNav className="buttonBackNavProjects"/>
+      <BackNav className="buttonBackNavProjects" />
       <div className="container">
         <div id="book" className="book">
           <div className="pages">
@@ -218,7 +214,7 @@ const Projects = () => {
                     : "buttonPreviousPage previousPage"
                 }
               >
-                Previous Page
+                {i18n.t("projects.back")}
               </button>
             ) : currentPage > 0 ? (
               <button
@@ -230,7 +226,7 @@ const Projects = () => {
                     : "buttonPreviousPage closeBook"
                 }
               >
-                Close projects
+                {i18n.t("projects.close")}
               </button>
             ) : (
               ""
@@ -245,7 +241,7 @@ const Projects = () => {
                     : "buttonPreviousPage previousPage"
                 }
               >
-                Previous Page
+                {i18n.t("projects.back")}
               </button>
             ) : currentPage < 13 && currentPage > 0 ? (
               <button
@@ -255,7 +251,7 @@ const Projects = () => {
                   isClicked ? "disabled nextPage" : "buttonNextPage nextPage"
                 }
               >
-                Next Page
+                {i18n.t("projects.next")}
               </button>
             ) : (
               <button
@@ -265,7 +261,7 @@ const Projects = () => {
                   isClicked ? "disabled openBook" : "buttonNextPage openBook"
                 }
               >
-                Open projects
+                {i18n.t("projects.open")}
               </button>
             )}
           </div>

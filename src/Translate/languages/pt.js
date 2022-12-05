@@ -2,8 +2,12 @@ const messages = {
   pt: {
     translations: {
       curriculum: {
-        title: {
+        titles: {
           curriculum: "Currículo",
+          aboutMe: "Sobre mim",
+          professional: "Experiência Profissional",
+          education: "Formação Acadêmica",
+          skills: "Habilidades"
         },
         subtitles: {
           aboutMe: "Perfil",
@@ -75,6 +79,62 @@ const messages = {
           }
           },
       },
+      nav: {
+        curriculum: "Currículo",
+        social: "Redes socias",
+        projects: "Projetos",
+        contact: "Contato",
+        hire: "Contrate-me",
+        legend: {
+          select: "Selecione um idioma:",
+          pt: "Português",
+          en: "Inglês"
+        }
+      },
+      projects: {
+        open: "Abrir portfólio",
+        close: "Fechar portfólio",
+        next: "Próximo",
+        back: "Voltar"
+      },
+      hire: {
+        title: "Gostou do portfólio e gostaria de entrar em contato?",
+        yesTxt: "O SIM irá te redirecionar para o formulário de feedbacks.",
+        noTxt: "O NÃO, ah o não... Você terá que descobrir hehehehe",
+        yesBtn: "Sim",
+        noBtn: "Não",
+        firstModal: {
+          firstTxt: 'Parabéns pela persistência em clicar no botão "Não".',
+          secondTxt: "Se tentar mais algumas vezes prometo liberar o clique. Deseja continuar tentando ou ser redirecionado para o formulário de contato?",
+          continueBtn: "Continuar",
+          formBtn: "Ir para formulário"
+        },
+        secondModal: {
+          firstTxt: "Uhuuuuuul!!! Você não desiste mesmo em ?!",
+          secondTxt: "Qualquer uma das opções agora irá te redirecionar para página de feedback. E aí, curtiu a experiência?",
+          likeBtn: "Sim, gostei!",
+          noBtn: "Não"
+        }
+      },
+      contact: {
+        title: "Encontrou algum bug ou gostaria de entrar em contato? Preencha o formulário abaixo:",
+        labels: {
+          name: "Nome",
+          email: "Email",
+          comments: "Comentários"
+        },
+        placeholders: {
+          name: "Digite seu nome (opcional).",
+          email: "Digite seu email.",
+          comments: "Insira seus comentários aqui."
+        },
+        submitBtn: "Enviar"
+      },
+      yupValidation: {
+        emailRequired: "Campo obrigatório.",
+        emailValid: "Por favor, digite um email válido.",
+        commentsRequired: "Por favor, insira algum comentário antes de enviar."
+      }
     },
   },
 };

@@ -20,7 +20,7 @@
   color: rgb(250, 254, 255);
 }
 
-.formContainer span {
+.formContainer h1 {
   font-size: 2rem;
   margin-bottom: 50px;
   color: #b5daff;
@@ -184,7 +184,7 @@
     width: 90vw;
   }
 
-  .formContainer span {
+  .formContainer h1 {
     font-size: 1.2rem;
     width: 90vw;
     margin-bottom: 50px;

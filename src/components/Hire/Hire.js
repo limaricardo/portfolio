@@ -4,14 +4,14 @@ import BackNav from "../Nav/BackNav";
 import HireModal from "./HireModal";
 import HireModalFree from "./HireModalFree";
 
+import { i18n } from "../../Translate/i18n";
+
 const Hire = () => {
   const [element, setElement] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [isStillOnPage, setIsStillOnPage] = useState(false);
 
   let [counter, setCounter] = useState(0);
-  console.log(counter);
-  console.log(isStillOnPage);
 
   const contact = document.getElementById("contact");
 
@@ -44,10 +44,10 @@ const Hire = () => {
       element.style.left = `${randomLeft}vw`;
       setCounter(counter + 1);
 
-      if (counter > 50 && !isStillOnPage) {
+      if (counter > 5 && !isStillOnPage) {
         setShowModal(true);
         element.style.display = "none";
-      } else if (counter > 100 && isStillOnPage) {
+      } else if (counter > 10 && isStillOnPage) {
         element.style.display = "none";
         setShowModal(true);
       }
@@ -68,15 +68,15 @@ const Hire = () => {
       <BackNav className="buttonBackNavHire" />
       <div id="hire" className={styles.hireContainer}>
         <div className={styles.question}>
-          <p>Gostou do portfólio e gostaria de entrar em contato?</p>
+          <h1>{i18n.t('hire.title')}</h1>
           <span>
-            O <span style={{ color: "lightgreen" }}>SIM</span> irá te
-            redirecionar para o formulário de feedbacks. <br /> O{" "}
-            <span style={{ color: "red" }}>NÃO</span>, o não ... Vocês terão que
-            descobrir hehehe
+          {i18n.t('hire.yesTxt')} 
+          </span>
+          <span>
+          {i18n.t('hire.noTxt')} 
           </span>
         </div>
-        {counter > 50 && showModal && !isStillOnPage && (
+        {counter > 5 && showModal && !isStillOnPage && (
           <HireModal
             counter={counter}
             setCounter={setCounter}
@@ -88,7 +88,7 @@ const Hire = () => {
             contact={contact}
           />
         )}
-        {counter > 100 && showModal && isStillOnPage && (
+        {counter > 10 && showModal && isStillOnPage && (
           <HireModalFree
             counter={counter}
             setCounter={setCounter}
@@ -102,10 +102,10 @@ const Hire = () => {
         )}
         <div className={styles.buttonWrapper}>
           <div id="divButtonYes" className={styles.divButtonYes}>
-            <button onClick={onYesClick}>Sim</button>
+            <button onClick={onYesClick}>{i18n.t('hire.yesBtn')} </button>
           </div>
           <div id="divButtonNo" className={styles.divButtonNo}>
-            <button>Não</button>
+            <button>{i18n.t('hire.noBtn')} </button>
           </div>
         </div>
       </div>

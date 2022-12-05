@@ -9,7 +9,6 @@ const BackNav = ({ className }) => {
   }, []);
 
   const onclick = () => {
-    console.log(elemento);
     setTimeout(() => {
       elemento.scrollIntoView({
         behavior: "smooth",

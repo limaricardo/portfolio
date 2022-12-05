@@ -3,6 +3,7 @@ import Certificates from "./Certificates";
 import Flipcard from "./Flipcard";
 import Skills from "./Skills";
 import About from "./About";
+import { i18n } from "../../Translate/i18n";
 
 import styles from "../../styles/curriculo.module.css";
 import ProfessionalExperiences from "./Professional";
@@ -29,20 +30,20 @@ const Curriculo = () => {
       <div className={styles.curriculoContainer}>
         <BackNav className="buttonBackNavCurriculo" />
         <header>
-          <h1>Currículo</h1>
+          <h1>{i18n.t('curriculum.titles.curriculum')}</h1>
         </header>
         <div className={styles.experiencesSection}>
           <Flipcard />
           <div className={styles.buttonsCurriculoDiv}>
-            <button className={info.aboutInfo ? styles.infoSelected : ""} onClick={() => setInfo(state => ({ ...initialState, aboutInfo: true }))}>Sobre mim</button>
+            <button className={info.aboutInfo ? styles.infoSelected : ""} onClick={() => setInfo(state => ({ ...initialState, aboutInfo: true }))}>{i18n.t('curriculum.titles.aboutMe')}</button>
             <button className={info.professionalInfo ? styles.infoSelected : ""} onClick={() => setInfo(state => ({ ...initialState, professionalInfo: true }))}>
-              Experiência Profissional
+            {i18n.t('curriculum.titles.professional')}
             </button>
             <button className={info.educationalInfo ? styles.infoSelected : ""} onClick={() => setInfo(state => ({ ...initialState, educationalInfo: true }))}>
-              Formação Acadêmica
+            {i18n.t('curriculum.titles.education')}
             </button>
             <button className={info.skillsInfo ? styles.infoSelected : ""} onClick={() => setInfo(state => ({ ...initialState, skillsInfo: true }))}>
-              Habilidades
+            {i18n.t('curriculum.titles.skills')}
             </button>
           </div>
           <div className={styles.infoContainer}>

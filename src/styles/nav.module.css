@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 body {
@@ -59,12 +59,11 @@ body {
     transform: translateX(-180px);
     opacity: 0.7;
   }
-  100%{
+  100% {
     transform: translateX(1800px);
     opacity: 0;
   }
-} 
-
+}
 
 .navContainer .liClickedCurriculo {
   animation: liClickedCurriculo 2s;
@@ -78,11 +77,11 @@ body {
     transform: translateX(180px);
     opacity: 0.7;
   }
-  100%{
+  100% {
     transform: translateX(-1500px);
     opacity: 0;
   }
-} 
+}
 
 .navContainer .liClickedProjects {
   animation-name: liClickedProjects;
@@ -97,14 +96,14 @@ body {
     transform: translateX(-220px);
     opacity: 0.6;
   }
-  100%{
+  100% {
     transform: rotate(-90deg) translateX(-780px);
     opacity: 0;
   }
-} 
+}
 
 .navContainer ul li::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -41px;
@@ -123,7 +122,7 @@ body {
 }
 
 .navContainer ul li::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -41px;
   left: 0px;
@@ -156,31 +155,86 @@ body {
 }
 
 .navContainer ul li:last-child::after {
-  box-shadow: -100px 120px 20px rgba(0,0,0,0.25);
+  box-shadow: -100px 120px 20px rgba(0, 0, 0, 0.25);
 }
 
 #home {
   margin-top: 200px;
 }
 
+.navContainer .languageSelect {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 1.3rem;
+}
+
+.navContainer .languages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}
+
+.navContainer .languages .portuguese, .navContainer .languages .english {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.languages img {
+  width: 30px;
+}
+
+.activePortuguese span{
+  color: rgb(110, 255, 115);
+  }
+
+.activeEnglish span{
+color: rgb(255, 112, 110);
+}
+
+.languages .disabled {
+  filter: grayscale(1);
+}
 
 /* Screen under 600px */
 
 @media only screen and (max-width: 600px) {
-
   .navContainer ul {
     left: 30px;
   }
 
   .navContainer ul li {
     width: 140px;
-    font-size: .7rem;
+    font-size: 0.7rem;
+  }
+
+
+  .navContainer .languageSelect {
+    right: 10px;
+    top: 10px;
+    font-size: .9rem;
   }
   
+  .navContainer .languages {
+    width: 100px;
+  }
+  
+  .navContainer .languages .portuguese, .navContainer .languages .english {
+    gap: 5px;
+  }
+  
+  .languages img {
+    width: 20px;
+  }
+
   .navContainer .liClickedRedeSocial {
     animation: liClickedRedeSocial 2s;
   }
-  
+
   @keyframes liClickedRedeSocial {
     0% {
       transform: translateX(-20px);
@@ -189,17 +243,17 @@ body {
       transform: translateX(-90px);
       opacity: 0.7;
     }
-    100%{
+    100% {
       transform: translateX(1800px);
       opacity: 0;
     }
-  } 
+  }
 
   .navContainer .liClickedProjects {
     animation-name: liClickedProjects;
     animation-duration: 2s;
   }
-  
+
   @keyframes liClickedProjects {
     0% {
       transform: translateX(-50px);
@@ -208,9 +262,9 @@ body {
       transform: translateX(-140px);
       opacity: 0.6;
     }
-    100%{
+    100% {
       transform: rotate(-90deg) translateX(-780px);
       opacity: 0;
     }
-  } 
+  }
 }

@@ -7,7 +7,7 @@ const Skills = () => {
     <div className={styles.skillSection}>
       <div className={styles.skills}>
         <div>
-          <h2 className={styles.h2Skills}>Habilidades</h2>
+          <h2 className={styles.h2Skills}>{i18n.t('curriculum.subtitles.skills')}</h2>
         </div>
         <div className={styles.skillsDiv}>
           <p>
@@ -117,7 +117,7 @@ const Skills = () => {
           </p>
         </div>
         <div className={styles.idiomas}>
-          <h2>Idiomas</h2>
+          <h2>{i18n.t('curriculum.subtitles.language')}</h2>
           <p>
             <img
               src="https://cdn-icons-png.flaticon.com/512/7721/7721263.png"

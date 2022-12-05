@@ -9,8 +9,6 @@ const DelayedLink = ({ delay, to, id, ...props }) => {
     e.preventDefault();
     const elemento = document.getElementById(id);
 
-    console.log(elemento)
-
     setTimeout(() => {
       elemento.scrollIntoView({
         behavior: "smooth",
