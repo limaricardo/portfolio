@@ -200,6 +200,7 @@ p {
   text-align: left;
   width: 400px;
   gap: 60px;
+  row-gap: 10px;
 }
 
 .skillsDiv p {
@@ -256,7 +257,7 @@ p {
 
   .infoContainer {
     max-width: 600px;
-    margin-top: 0px;
+    margin-top: 30px;
   }
 }
 
