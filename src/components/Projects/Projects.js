@@ -57,9 +57,64 @@ const Projects = () => {
     "url('https://i.imgur.com/GOdCV6H.png')",
   ];
 
+  const imagesEN = [
+    "url('https://i.imgur.com/0bVj5rb.png')",
+    "url('https://i.imgur.com/g4ZpR2A.png')",
+    "url('https://i.imgur.com/2siRhnK.png')",
+    "url('https://i.imgur.com/CQwDAaA.png')",
+    "url('https://i.imgur.com/L1JCcmb.png')",
+    "url('https://i.imgur.com/79J9gPs.png')",
+    "url('https://i.imgur.com/aoG7KU6.png')",
+    "url('https://i.imgur.com/5ZTrvbm.png')",
+    "url('https://i.imgur.com/6zdctVW.png')",
+    "url('https://i.imgur.com/Ft6nbTL.png')",
+    "url('https://i.imgur.com/UU1a52d.png')",
+    "url('https://i.imgur.com/aqiq9tl.png')",
+    "url('https://i.imgur.com/mBCwZ8W.png')",
+    "url('https://i.imgur.com/mClaC6p.png')",
+    "url('https://i.imgur.com/KD3l6H0.png')",
+    "url('https://i.imgur.com/2KqQKQY.png')",
+    "url('https://i.imgur.com/B1ng7Yk.png')",
+    "url('https://i.imgur.com/rDCueMq.png')",
+    "url('https://i.imgur.com/XRVMw1n.png')",
+    "url('https://i.imgur.com/hpq3Ous.png')",
+    "url('https://i.imgur.com/mengbwn.png')",
+    "url('https://i.imgur.com/KbiIp8a.png')",
+    "url('https://i.imgur.com/Ca9tdjF.png')",
+  ];
+
+  const imagesReverseEN = [
+    "url('https://i.imgur.com/11ceXcL.png')",
+    "url('https://i.imgur.com/V38VLnQ.png')",
+    "url('https://i.imgur.com/dkNLJiU.png')",
+    "url('https://i.imgur.com/WDJW750.png')",
+    "url('https://i.imgur.com/BGHcXbP.png')",
+    "url('https://i.imgur.com/q2QyfEM.png')",
+    "url('https://i.imgur.com/7esNVo7.png')",
+    "url('https://i.imgur.com/9aZ0xDi.png')",
+    "url('https://i.imgur.com/cCgC7x3.png')",
+    "url('https://i.imgur.com/bnwp0Ml.png')",
+    "url('https://i.imgur.com/ALFxrHc.png')",
+    "url('https://i.imgur.com/cb6DLFt.png')",
+    "url('https://i.imgur.com/ckPLey3.png')",
+    "url('https://i.imgur.com/FozQeMQ.png')",
+    "url('https://i.imgur.com/8ZpT3JC.png')",
+    "url('https://i.imgur.com/vu1WRoh.png')",
+    "url('https://i.imgur.com/aa9JJGh.png')",
+    "url('https://i.imgur.com/Ahamp2T.png')",
+    "url('https://i.imgur.com/hdAGPhw.png')",
+    "url('https://i.imgur.com/EGn2Y9C.png')",
+    "url('https://i.imgur.com/ZJHSvWF.png')",
+    "url('https://i.imgur.com/WI4uZzt.png')",
+    "url('https://i.imgur.com/hkLt5Sk.png')",
+  ];
+
   const [currentPage, setCurrentPage] = useState(-1);
   const [pageLoad, setPageLoad] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const [language] = useState(localStorage.getItem("i18nextLng"));
+
+  console.log(language);
 
   useEffect(() => {
     setCurrentPage(0);
@@ -73,8 +128,14 @@ const Projects = () => {
     page3.style.display = "none";
 
     // page3.style.backgroundImage = images[currentPage];
-    page6.style.backgroundImage = imagesReverse[currentPage];
-    page6.style.borderRadius = "0px";
+
+    if (language === "pt-BR") {
+      page6.style.backgroundImage = imagesReverse[currentPage];
+      page6.style.borderRadius = "0px";
+    } else {
+      page6.style.backgroundImage = imagesReverseEN[currentPage];
+      page6.style.borderRadius = "0px";
+    }
   }
 
   const onCloseClick = () => {
@@ -83,11 +144,11 @@ const Projects = () => {
     for (let i = 1; i <= 7; i++) {
       document.getElementById(
         `flip${i}`
-      ).className = `flipPageBackward${currentPage} flip flip${i} flep${i}`;
+      ).className = `flipPageBackward${language}${currentPage} flip flip${i} flep${i}`;
       setTimeout(() => {
         document.getElementById(
           `flip${i}`
-        ).className = `flipPageBackward${currentPage} flip flip${i} flop${i}`;
+        ).className = `flipPageBackward${language}${currentPage} flip flip${i} flop${i}`;
       }, 2000);
     }
 
@@ -95,17 +156,32 @@ const Projects = () => {
       if (currentPage - 1 === 0) {
         page3.style.display = "none";
         setTimeout(() => {
-          page6.style.backgroundImage = imagesReverse[currentPage - 1];
-          setIsClicked(false);
+          if (language === "pt-BR") {
+            page6.style.backgroundImage = imagesReverse[currentPage - 1];
+            setIsClicked(false);
+          } else {
+            page6.style.backgroundImage = imagesReverseEN[currentPage - 1];
+            setIsClicked(false);
+          }
         }, 4000);
       } else if (currentPage + 1 === i) {
         page3.style.display = "none";
         setTimeout(() => {
-          page6.style.backgroundImage = imagesReverse[currentPage];
-          page6.style.borderRadius = "0px";
-          setIsClicked(false);
+          if (language === "pt-BR") {
+            page6.style.backgroundImage = imagesReverse[currentPage];
+            page6.style.borderRadius = "0px";
+            setIsClicked(false);
+          } else {
+            page6.style.backgroundImage = imagesReverseEN[currentPage];
+            page6.style.borderRadius = "0px";
+            setIsClicked(false);
+          }
         }, 4000);
-        page3.style.backgroundImage = images[currentPage - 1];
+        if (language === "pt-BR") {
+          page3.style.backgroundImage = images[currentPage - 1];
+        } else {
+          page3.style.backgroundImage = imagesEN[currentPage - 1];
+        }
       }
     }
 
@@ -124,23 +200,32 @@ const Projects = () => {
     for (let i = 1; i <= 7; i++) {
       document.getElementById(
         `flip${i}`
-      ).className = `flipPageBackward${currentPage} flip flip${i} flep${i}`;
+      ).className = `flipPageBackward${language}${currentPage} flip flip${i} flep${i}`;
 
       setTimeout(() => {
         document.getElementById(
           `flip${i}`
-        ).className = `flipPageBackward${currentPage} flip flip${i} flop${i}`;
+        ).className = `flipPageBackward${language}${currentPage} flip flip${i} flop${i}`;
       }, 2000);
     }
 
     for (let i = 0; i < 13; i++) {
       if (currentPage + 1 === i) {
         setTimeout(() => {
-          page6.style.backgroundImage = imagesReverse[currentPage * 2 - 2];
-          setIsClicked(false);
+          if (language === "pt-BR") {
+            page6.style.backgroundImage = imagesReverse[currentPage * 2 - 2];
+            setIsClicked(false);
+          } else {
+            page6.style.backgroundImage = imagesReverseEN[currentPage * 2 - 2];
+            setIsClicked(false);
+          }
         }, 4000);
 
-        page3.style.backgroundImage = images[currentPage * 2 - 3];
+        if (language === "pt-BR") {
+          page3.style.backgroundImage = images[currentPage * 2 - 3];
+        } else {
+          page3.style.backgroundImage = imagesEN[currentPage * 2 - 3];
+        }
       }
     }
 
@@ -160,25 +245,39 @@ const Projects = () => {
     for (let i = 1; i <= 7; i++) {
       document.getElementById(
         `flip2${i}`
-      ).className = `flipPageForward${currentPage} flip flip${i} flep${i}`;
+      ).className = `flipPageForward${language}${currentPage} flip flip${i} flep${i}`;
 
       setTimeout(() => {
         document.getElementById(
           `flip2${i}`
-        ).className = `flipPageForward${currentPage} flip flip${i} flop${i}`;
+        ).className = `flipPageForward${language}${currentPage} flip flip${i} flop${i}`;
       }, 2000);
     }
 
     for (let i = 0; i < 13; i++) {
       if (currentPage === i) {
         setTimeout(() => {
-          page3.style.backgroundImage = images[currentPage + (currentPage + 1)];
-          page3.style.display = "block";
-          setIsClicked(false);
+          if (language === "pt-BR") {
+            page3.style.backgroundImage =
+              images[currentPage + (currentPage + 1)];
+            page3.style.display = "block";
+            setIsClicked(false);
+          } else {
+            page3.style.backgroundImage =
+              imagesEN[currentPage + (currentPage + 1)];
+            page3.style.display = "block";
+            setIsClicked(false);
+          }
         }, 4000);
         page6.style.borderRadius = "10% 41% 24% 30% / 0% 2.5% 2.5% 0%";
-        page6.style.backgroundImage =
-          imagesReverse[currentPage + (currentPage + 2)];
+
+        if (language === "pt-BR") {
+          page6.style.backgroundImage =
+            imagesReverse[currentPage + (currentPage + 2)];
+        } else {
+          page6.style.backgroundImage =
+            imagesReverseEN[currentPage + (currentPage + 2)];
+        }
       }
     }
 

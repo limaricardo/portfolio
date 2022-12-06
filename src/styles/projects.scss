@@ -44,6 +44,33 @@ $imagesReverse: url("https://i.imgur.com/mhHUaIP.png"),
   url("https://i.imgur.com/P2XsyKT.png"), url("https://i.imgur.com/vfQQcVy.png"),
   url("https://i.imgur.com/KCkGZvL.png"), url("https://i.imgur.com/GOdCV6H.png");
 
+$imagesEN: url("https://i.imgur.com/g4ZpR2A.png"),
+  url("https://i.imgur.com/0bVj5rb.png"), url("https://i.imgur.com/g4ZpR2A.png"),
+  url("https://i.imgur.com/2siRhnK.png"), url("https://i.imgur.com/CQwDAaA.png"),
+  url("https://i.imgur.com/L1JCcmb.png"), url("https://i.imgur.com/79J9gPs.png"),
+  url("https://i.imgur.com/aoG7KU6.png"), url("https://i.imgur.com/5ZTrvbm.png"),
+  url("https://i.imgur.com/6zdctVW.png"), url("https://i.imgur.com/Ft6nbTL.png"),
+  url("https://i.imgur.com/UU1a52d.png"), url("https://i.imgur.com/aqiq9tl.png"),
+  url("https://i.imgur.com/mBCwZ8W.png"), url("https://i.imgur.com/mClaC6p.png"),
+  url("https://i.imgur.com/KD3l6H0.png"), url("https://i.imgur.com/2KqQKQY.png"),
+  url("https://i.imgur.com/B1ng7Yk.png"), url("https://i.imgur.com/rDCueMq.png"),
+  url("https://i.imgur.com/XRVMw1n.png"), url("https://i.imgur.com/hpq3Ous.png"),
+  url("https://i.imgur.com/mengbwn.png"), url("https://i.imgur.com/KbiIp8a.png"),
+  url("https://i.imgur.com/Ca9tdjF.png");
+
+$imagesReverseEN: url("https://i.imgur.com/11ceXcL.png"),
+  url("https://i.imgur.com/V38VLnQ.png"), url("https://i.imgur.com/dkNLJiU.png"),
+  url("https://i.imgur.com/WDJW750.png"), url("https://i.imgur.com/BGHcXbP.png"),
+  url("https://i.imgur.com/q2QyfEM.png"), url("https://i.imgur.com/7esNVo7.png"),
+  url("https://i.imgur.com/9aZ0xDi.png"), url("https://i.imgur.com/cCgC7x3.png"),
+  url("https://i.imgur.com/bnwp0Ml.png"), url("https://i.imgur.com/ALFxrHc.png"),
+  url("https://i.imgur.com/cb6DLFt.png"), url("https://i.imgur.com/ckPLey3.png"),
+  url("https://i.imgur.com/FozQeMQ.png"), url("https://i.imgur.com/8ZpT3JC.png"),
+  url("https://i.imgur.com/vu1WRoh.png"), url("https://i.imgur.com/aa9JJGh.png"),
+  url("https://i.imgur.com/Ahamp2T.png"), url("https://i.imgur.com/hdAGPhw.png"),
+  url("https://i.imgur.com/EGn2Y9C.png"), url("https://i.imgur.com/ZJHSvWF.png"),
+  url("https://i.imgur.com/WI4uZzt.png"), url("https://i.imgur.com/hkLt5Sk.png");
+
 #projects {
   background: radial-gradient(rgb(125, 234, 253), rgb(0, 18, 110));
   width: 100%;
@@ -197,7 +224,302 @@ $imagesReverse: url("https://i.imgur.com/mhHUaIP.png"),
 }
 
 @for $x from 0 through 10 {
-  .flipPageForward#{$x} {
+  .flipPageForwarden-US#{$x} {
+    width: 32px;
+    height: 530px;
+    position: absolute;
+    top: -230px;
+    transform-origin: 100% 100%;
+    right: 100%;
+    border: solid $borderColor;
+    border-width: 2px 0px;
+    perspective: 4200px;
+    perspective-origin: center;
+    transform-style: preserve-3d;
+    background-size: 420px 300px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0%;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      background-size: 210px 530px;
+    }
+    &.flip1 {
+      right: 50%;
+      animation: flip#{$x}Forwarden-US1 $speed infinite ease-in-out;
+      border-width: 2px 2px 2px 0;
+
+      &::after {
+        animation: nextFlip#{$x}Forwarden-US1
+          $speed *
+          5
+          $speed *
+          -4
+          infinite
+          steps(1);
+      }
+    }
+    &:not(.flip1) {
+      right: calc(100% - 2px);
+      top: -2px;
+      transform-origin: right;
+      animation: flip#{$x}Forwarden-US2 $speed ease-in-out infinite;
+    }
+
+    @for $i from 2 through 7 {
+      &.flip#{$i}::after {
+        animation: nextFlip#{$x}Forwarden-US#{$i}
+          $speed *
+          5
+          $speed *
+          -4
+          infinite
+          steps(1);
+      }
+    }
+
+    &.flip7 {
+      width: 30px;
+      border-width: 2px 0px 2px 2px;
+      &::after {
+        animation: nextFlip#{$x}Forwarden-US7
+          $speed *
+          5
+          $speed *
+          -4
+          infinite
+          steps(1);
+      }
+    }
+
+    @keyframes flip#{$x}Forwarden-US1 {
+      0%,
+      20% {
+        transform: rotateX($bookAngle) rotateY(0deg);
+        border-radius: 0% 100% 100% 0% / 0% 2.7% 2.7% 0%;
+      }
+      80%,
+      100% {
+        transform: rotateX($bookAngle) rotateY(180deg);
+        border-radius: 0% 100% 100% 0% / 0% 2.7% 2.7% 0%;
+      }
+    }
+
+    @keyframes flip#{$x}Forwarden-US2 {
+      0%,
+      20% {
+        transform: rotateY(0deg) translateY(0px);
+      }
+      50% {
+        transform: rotateY(-15deg) translateY(0px);
+      }
+    }
+  }
+
+  @keyframes nextFlip#{$x}Forwarden-US1 {
+    @for $i from 0 through 4 {
+      #{$i * 20}% {
+        background-image: nth($imagesReverseEN, ($x + ($x + 1)));
+        background-position: -178px -2px;
+        transform: rotateY(0deg);
+      }
+
+      #{10+($i * 20)}% {
+        background-image: nth($imagesReverseEN, ($x + ($x + 2)));
+        background-position: -210px -2px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  @for $i from 2 through 6 {
+    @keyframes nextFlip#{$x}Forwarden-US#{$i} {
+      @for $j from 0 through 4 {
+        #{$j * 20}% {
+          background-image: nth($imagesReverseEN, ($x + ($x + 1)));
+          background-position: #{-148 + (($i - 2) * 30)}px -2px;
+          transform: rotateY(0deg);
+        }
+
+        #{((10 + ($j * 20)) + (($i - 1) * 0.5))}% {
+          background-image: nth($imagesReverseEN, ($x + ($x + 2)));
+          background-position: #{-238 - (($i - 2) * 30)}px -2px;
+          transform: rotateY(180deg);
+        }
+      }
+    }
+  }
+
+  @keyframes nextFlip#{$x}Forwarden-US7 {
+    @for $i from 0 through 4 {
+      #{$i * 20}% {
+        background-image: nth($imagesReverseEN, ($x + ($x + 1)));
+        background-position: -2px -2px;
+        transform: rotateY(0deg);
+      }
+      #{13+($i * 20)}% {
+        background-image: nth($imagesReverseEN, ($x + ($x + 2)));
+        background-position: -388px -2px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  .flipPageBackwarden-US#{$x + 1} {
+    width: 32px;
+    height: 530px;
+    position: absolute;
+    top: -230px;
+    transform-origin: 100% 100%;
+    right: 100%;
+    border: solid $borderColor;
+    border-width: 2px 0px;
+    perspective: 4200px;
+    perspective-origin: center;
+    transform-style: preserve-3d;
+    background-size: 420px 300px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0%;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      background-size: 210px 530px;
+    }
+    &.flip1 {
+      right: 50%;
+      animation: flip#{$x + 1}Backwarden-US1 $speed infinite ease-in-out;
+      border-width: 2px 2px 2px 0;
+
+      &::after {
+        animation: nextFlip#{$x +
+          1}Backwarden-US1
+          $speed *
+          5
+          $speed *
+          -4
+          infinite
+          steps(1);
+      }
+    }
+    &:not(.flip1) {
+      right: calc(100% - 2px);
+      top: -2px;
+      transform-origin: right;
+      animation: flip#{$x + 1}Backwarden-US2 $speed ease-in-out infinite;
+    }
+
+    @for $i from 2 through 7 {
+      &.flip#{$i}::after {
+        animation: nextFlip#{$x +
+          1}Backwarden-US#{$i}
+          $speed *
+          5
+          $speed *
+          -4
+          infinite
+          steps(1);
+      }
+    }
+
+    &.flip7 {
+      width: 30px;
+      border-width: 2px 0px 2px 2px;
+      &::after {
+        animation: nextFlip#{$x +
+          1}Backwarden-US7
+          $speed *
+          5
+          $speed *
+          -4
+          infinite
+          steps(1);
+      }
+    }
+
+    @keyframes flip#{$x+1}Backwarden-US1 {
+      0%,
+      20% {
+        transform: rotateX($bookAngle) rotateY(0deg);
+        border-radius: 0% 100% 100% 0% / 0% 2.7% 2.7% 0%;
+      }
+      80%,
+      100% {
+        transform: rotateX($bookAngle) rotateY(180deg);
+        border-radius: 0% 100% 100% 0% / 0% 2.7% 2.7% 0%;
+      }
+    }
+
+    @keyframes flip#{$x+1}Backwarden-US2 {
+      0%,
+      20% {
+        transform: rotateY(0deg) translateY(0px);
+      }
+      50% {
+        transform: rotateY(-15deg) translateY(0px);
+      }
+    }
+  }
+
+  @keyframes nextFlip#{$x+1}Backwarden-US1 {
+    @for $i from 0 through 4 {
+      #{$i * 20}% {
+        background-image: nth($imagesEN, ($x + ($x + 3)));
+        background-position: -178px -2px;
+        transform: rotateY(0deg);
+      }
+      #{10+($i * 20)}% {
+        background-image: nth($imagesEN, ($x + ($x + 2)));
+        background-position: -210px -2px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  @for $i from 2 through 6 {
+    @keyframes nextFlip#{$x+1}Backwarden-US#{$i} {
+      @for $j from 1 through 4 {
+        #{$j * 20}% {
+          background-image: nth($imagesEN, ($x + ($x + 3)));
+          background-position: #{-148 + (($i - 2) * 30)}px -2px;
+          transform: rotateY(0deg);
+        }
+        #{((10 + ($j * 20)) + (($i - 1) * 0.5))}% {
+          background-image: nth($imagesEN, ($x + ($x + 2)));
+          background-position: #{-238 - (($i - 2) * 30)}px -2px;
+          transform: rotateY(180deg);
+        }
+      }
+    }
+  }
+
+  @keyframes nextFlip#{$x+1}Backwarden-US7 {
+    @for $i from 0 through 4 {
+      #{$i * 20}% {
+        background-image: nth($imagesEN, ($x + ($x + 3)));
+        background-position: -2px -2px;
+        transform: rotateY(0deg);
+      }
+      #{13+($i * 20)}% {
+        background-image: nth($imagesEN, ($x + ($x + 2)));
+        background-position: -388px -2px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
+
+
+
+@for $x from 0 through 10 {
+  .flipPageForwardpt-BR#{$x} {
     width: 32px;
     height: 530px;
     position: absolute;
@@ -342,7 +664,7 @@ $imagesReverse: url("https://i.imgur.com/mhHUaIP.png"),
     }
   }
 
-  .flipPageBackward#{$x + 1} {
+  .flipPageBackwardpt-BR#{$x + 1} {
     width: 32px;
     height: 530px;
     position: absolute;
