@@ -12,7 +12,6 @@ const Nav = () => {
   const [isSocialClicked, setIsSocialClicked] = useState(false);
   const [language] = useState(localStorage.getItem(I18N_STORAGE_KEY));
 
-  console.log(language);
 
   const onClickClass = (e) => {
     setClicked(e.currentTarget.id);

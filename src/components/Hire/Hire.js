@@ -68,13 +68,11 @@ const Hire = () => {
       <BackNav className="buttonBackNavHire" />
       <div id="hire" className={styles.hireContainer}>
         <div className={styles.question}>
-          <h1>{i18n.t('hire.title')}</h1>
-          <span>
-          {i18n.t('hire.yesTxt')} 
-          </span>
-          <span>
-          {i18n.t('hire.noTxt')} 
-          </span>
+          <h1>{i18n.t("hire.title")}</h1>
+          <div className={styles.questionTxt}>
+            <p><span>{i18n.t("hire.yes")}</span>{i18n.t("hire.yesTxt")}</p>
+            <p><span>{i18n.t("hire.no")}</span>{i18n.t("hire.noTxt")}</p>
+          </div>
         </div>
         {counter > 5 && showModal && !isStillOnPage && (
           <HireModal
@@ -102,10 +100,10 @@ const Hire = () => {
         )}
         <div className={styles.buttonWrapper}>
           <div id="divButtonYes" className={styles.divButtonYes}>
-            <button onClick={onYesClick}>{i18n.t('hire.yesBtn')} </button>
+            <button onClick={onYesClick}>{i18n.t("hire.yesBtn")} </button>
           </div>
           <div id="divButtonNo" className={styles.divButtonNo}>
-            <button>{i18n.t('hire.noBtn')} </button>
+            <button>{i18n.t("hire.noBtn")} </button>
           </div>
         </div>
       </div>

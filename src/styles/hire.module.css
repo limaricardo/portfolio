@@ -64,6 +64,18 @@
   font-size: 4.5rem;
   color: rgb(232, 162, 78);
   line-height: 5rem;
+  width: 90vw;
+}
+
+.questionTxt p:first-child span:first-child {
+  color: rgb(68, 250, 68);
+}
+.questionTxt p:last-child span:last-child {
+  color: rgb(250, 80, 68);
+}
+
+.questionTxt p {
+  font-size: 1.1rem;
 }
 
 .buttonWrapper {
@@ -222,5 +234,9 @@
   .hireContainer .divButtonModalYes button,
   .hireContainer .divButtonFreeYes button {
     font-size: 0.7rem;
+  }
+
+  .questionTxt p {
+    font-size: .9rem;
   }
 }

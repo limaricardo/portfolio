@@ -17,8 +17,12 @@ const messages = {
           language: "Languages",
         },
         messages: {
-          aboutMe:
-            "Front-End Developer with experience in Web/Desktop development with React / Node.js / Electron. Communicative and passion for sharing knowledge led me to create a YouTube channel and become a teacher at BlueEdTech, where I work as a part-time Full-Stack Assistant Professor. Dynamic, good communication and flexible. I'm looking for challenges that give me the opportunity to expand my knowledge and experience in front-end development with React / TypeScript.",
+          aboutMe1stParag:
+            "Front-End Developer with experience in Web/Desktop development with React / Node.js / Electron.",
+          aboutMe2ndParag:
+            "Communicative and passion for sharing knowledge led me to create a YouTube channel and become a teacher at BlueEdTech, where I work as a part-time Full-Stack Assistant Professor.",
+          aboutMe3rdParag:
+            "Dynamic, good communication and flexible. I'm looking for challenges that give me the opportunity to expand my knowledge and experience in front-end development with React / TypeScript.",
           professional: {
             firstH6: "July 2022 - Present",
             firstTxt: " — Front-End Developer (Wexpert Consulting)",
@@ -31,12 +35,12 @@ const messages = {
             fifthH6: "March 2018 - November 2018",
             fifthTxt: " — Aspect Controller (Groupe PSA)",
             sixthH6: "Setember 2016 - December 2017",
-            sixthTxt:
-              " — Process Engineer Intern (Faurecia Automotive)",
+            sixthTxt: " — Process Engineer Intern (Faurecia Automotive)",
           },
           education: {
             firstH6: "March 2022 - March 2023",
-            firstTxt: " — Postgraduate Degree in Program Analysis and Development (EducaMais)",
+            firstTxt:
+              " — Postgraduate Degree in Program Analysis and Development (EducaMais)",
             secondH6: "May 2021 - November 2021",
             secondTxt: " — Introduction to Computer Science (Harvard)",
             thirdH6: "February 2013 - December 2017",
@@ -95,12 +99,15 @@ const messages = {
       },
       hire: {
         title: "Did you like the portfolio and would like to get in touch?",
-        yesTxt: "YES will redirect you to the feedback form.",
-        noTxt: "The NO... You'll have to find out hehe",
+        yes: "YES",
+        no: "NO",
+        yesTxt: " will redirect you to the feedback form.",
+        noTxt: "... You'll have to find out hehe",
         yesBtn: "Yes",
         noBtn: "No",
         firstModal: {
-          firstTxt: 'Congratulations on persisting in clicking the "No" button.',
+          firstTxt:
+            'Congratulations on persisting in clicking the "No" button.',
           secondTxt:
             "If you try a few more times I promise to release the click. Do you want to keep trying or be redirected to the contact form?",
           continueBtn: "Continue",
@@ -132,8 +139,8 @@ const messages = {
       yupValidation: {
         emailRequired: "Required field.",
         emailValid: "Please enter a valid email.",
-        commentsRequired: "Please enter any comments before submitting."
-      }
+        commentsRequired: "Please enter any comments before submitting.",
+      },
     },
   },
 };

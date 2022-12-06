@@ -8,7 +8,13 @@ const About = () => {
       <div className={styles.timelineContainer}>
         <h2>{i18n.t('curriculum.subtitles.aboutMe')}</h2>
         <p>
-          {i18n.t('curriculum.messages.aboutMe')}
+          {i18n.t('curriculum.messages.aboutMe1stParag')}
+        </p>
+        <p>
+          {i18n.t('curriculum.messages.aboutMe2ndParag')}
+        </p>
+        <p>
+          {i18n.t('curriculum.messages.aboutMe3rdParag')}
         </p>
       </div>
     </div>
