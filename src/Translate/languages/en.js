@@ -69,7 +69,7 @@ const messages = {
           idiom: {
             idiom1: "Portuguese - Native",
             idiom2: "Inglês - Advanced",
-            idiom3: "Alemão - Basic",
+            idiom3: "German - Basic",
           },
           flipCard: {
             aboutMe: "About me",
