@@ -44,10 +44,10 @@ const Hire = () => {
       element.style.left = `${randomLeft}vw`;
       setCounter(counter + 1);
 
-      if (counter > 5 && !isStillOnPage) {
+      if (counter > 20 && !isStillOnPage) {
         setShowModal(true);
         element.style.display = "none";
-      } else if (counter > 10 && isStillOnPage) {
+      } else if (counter > 50 && isStillOnPage) {
         element.style.display = "none";
         setShowModal(true);
       }
@@ -74,7 +74,7 @@ const Hire = () => {
             <p><span>{i18n.t("hire.no")}</span>{i18n.t("hire.noTxt")}</p>
           </div>
         </div>
-        {counter > 5 && showModal && !isStillOnPage && (
+        {counter > 20 && showModal && !isStillOnPage && (
           <HireModal
             counter={counter}
             setCounter={setCounter}
@@ -86,7 +86,7 @@ const Hire = () => {
             contact={contact}
           />
         )}
-        {counter > 10 && showModal && isStillOnPage && (
+        {counter > 50 && showModal && isStillOnPage && (
           <HireModalFree
             counter={counter}
             setCounter={setCounter}
