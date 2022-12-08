@@ -84,9 +84,9 @@ const Flipcard = () => {
             <div className={styles.textContainer}>
               {isAboutActive && (
                 <>
-                  <span><img className={styles.iconInfoCard} src="https://cdn-icons-png.flaticon.com/512/3870/3870998.png" alt=""/>Rio de Janeiro</span>
-                  <span><img className={styles.iconInfoCard} src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" alt=""/>limaricardop@gmail.com</span>
-                  <span><img className={styles.iconInfoCard} src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt=""/><a href="https://www.linkedin.com/in/ricardo-pereira-lima/" target="_blank">LinkedIn</a></span>
+                  <span><img className={styles.iconInfoCard} src="https://cdn-icons-png.flaticon.com/512/3870/3870998.png" alt="Local icon"/>Rio de Janeiro</span>
+                  <span><img className={styles.iconInfoCard} src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" alt="Gmail icon"/>limaricardop@gmail.com</span>
+                  <span><img className={styles.iconInfoCard} src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn icon"/><a href="https://www.linkedin.com/in/ricardo-pereira-lima/" target="_blank">LinkedIn</a></span>
                   
                 </>
               )}
@@ -95,62 +95,62 @@ const Flipcard = () => {
                   <img
                     className={styles.iconImg}
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                    alt=""
+                    alt="Javascript icon"
                   />
                   <img
                     className={styles.iconImg}
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
-                    alt=""
+                    alt="React icon"
                   />
                   <img
                     className={styles.iconImg}
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
-                    alt=""
+                    alt="HTML5 icon"
                   />
                   <img
                     className={styles.iconImg}
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"
-                    alt=""
+                    alt="CSS3 icon"
                   />
                   <img
                     className={styles.iconImg}
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                    alt=""
+                    alt="Typescript icon"
                   />
                   <img
                     className={styles.iconImg}
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
-                    alt=""
+                    alt="Node.js icon"
                   />
                   <img
                     className={styles.iconImg}
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
-                    alt=""
+                    alt="MySQL icon"
                   />
                   <img
                     className={styles.iconImg}
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
-                    alt=""
+                    alt="Jest icon"
                   />
                   <img
                     className={styles.iconImg}
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                    alt=""
+                    alt="Figma icon"
                   />
                   <img
                     className={styles.iconImg}
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
-                    alt=""
+                    alt="C# icon"
                   />
                   <img
                     className={styles.iconImg}
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
-                    alt=""
+                    alt="GitHub icon"
                   />
                   <img
                     className={styles.iconImg}
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
-                    alt=""
+                    alt="Sass icon"
                   />
                 </>
               )}

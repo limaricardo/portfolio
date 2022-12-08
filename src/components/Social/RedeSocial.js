@@ -8,8 +8,8 @@ const RedeSocial = () => {
   return (
     <div className={styles.socialContainer}>
       <BackNav className="buttonBackNavSocial"/>
-      <img src={mockup} className={styles.mockupImg} alt=""></img>
-      <img src={insta} className={styles.instaImg} alt="" />
+      <img src={mockup} className={styles.mockupImg} alt="Mobile mockup"></img>
+      <img src={insta} className={styles.instaImg} alt="LinkedIn that pop up on hover" />
       <ul>
         <li className={styles.github}>
           <a href="https://github.com/limaricardo" target="__blank">
@@ -21,7 +21,7 @@ const RedeSocial = () => {
           </a>
         </li>
         <li className={styles.whatsapp}>
-          <a href="#ab">
+          <a href="https://wa.me/5524998512233" target="__blank">
             <span></span>
             <span></span>
             <span></span>

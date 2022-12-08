@@ -74,7 +74,7 @@ const Nav = () => {
               >
                 <img
                   src="https://i.imgur.com/C98nH9F.png"
-                  alt="Brazilian Flag"
+                  alt="USA Flag"
                 />
                 <span value="en-US">{i18n.t("nav.legend.en")}</span>
               </div>

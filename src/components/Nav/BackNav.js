@@ -23,7 +23,7 @@ const BackNav = ({ className }) => {
       <button onClick={onclick}>
         <img
           src="https://cdn-icons-png.flaticon.com/512/591/591855.png"
-          alt=""
+          alt="Arrow point to navigator menu"
         />
       </button>
     </div>
