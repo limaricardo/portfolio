@@ -24,35 +24,46 @@ const Hire = () => {
     setElement(document.querySelector("#divButtonNo"));
   }, []);
 
-  if (element) {
-    element.addEventListener("mousemove", (e) => {
+  useEffect(() => {
+    const onMouseMoveElement = (e) => {
       positionXBox = e.x;
       positionYBox = e.y;
-    });
-  }
+    };
+    const onMouseMoveWindow = (e) => {
+      positionXMouse = e.x;
+      positionYMouse = e.y;
 
-  window.addEventListener("mousemove", (e) => {
-    positionXMouse = e.x;
-    positionYMouse = e.y;
+      if (positionXBox === positionXMouse && positionYBox === positionYMouse) {
+        let randomTop = Math.floor(Math.random() * 12 - Math.random() * 76);
+        let randomLeft = Math.floor(Math.random() * 30 - Math.random() * 58);
+        element.style.position = "relative";
+        element.style.display = "block";
+        element.style.top = `${randomTop}vh`;
+        element.style.left = `${randomLeft}vw`;
+        setCounter((prev) => prev + 1);
 
-    if (positionXBox === positionXMouse && positionYBox === positionYMouse) {
-      let randomTop = Math.floor(Math.random() * 12 - Math.random() * 76);
-      let randomLeft = Math.floor(Math.random() * 30 - Math.random() * 58);
-      element.style.position = "relative";
-      element.style.display = "block";
-      element.style.top = `${randomTop}vh`;
-      element.style.left = `${randomLeft}vw`;
-      setCounter(counter + 1);
-
-      if (counter > 20 && !isStillOnPage) {
-        setShowModal(true);
-        element.style.display = "none";
-      } else if (counter > 50 && isStillOnPage) {
-        element.style.display = "none";
-        setShowModal(true);
+        if (counter > 20 && !isStillOnPage) {
+          setShowModal(true);
+          element.style.display = "none";
+        } else if (counter > 50 && isStillOnPage) {
+          element.style.display = "none";
+          setShowModal(true);
+        }
       }
+    };
+
+    if (element) {
+      element.addEventListener("mousemove", onMouseMoveElement);
     }
-  });
+
+    window.addEventListener("mousemove", onMouseMoveWindow);
+    return () => {
+      if (element) {
+        element.removeEventListener("mousemove", onMouseMoveElement);
+      }
+      window.removeEventListener("mousemove", onMouseMoveWindow);
+    };
+  }, [element, counter, isStillOnPage]);
 
   const onYesClick = () => {
     setTimeout(() => {
@@ -70,8 +81,14 @@ const Hire = () => {
         <div className={styles.question}>
           <h1>{i18n.t("hire.title")}</h1>
           <div className={styles.questionTxt}>
-            <p><span>{i18n.t("hire.yes")}</span>{i18n.t("hire.yesTxt")}</p>
-            <p><span>{i18n.t("hire.no")}</span>{i18n.t("hire.noTxt")}</p>
+            <p>
+              <span>{i18n.t("hire.yes")}</span>
+              {i18n.t("hire.yesTxt")}
+            </p>
+            <p>
+              <span>{i18n.t("hire.no")}</span>
+              {i18n.t("hire.noTxt")}
+            </p>
           </div>
         </div>
         {counter > 20 && showModal && !isStillOnPage && (

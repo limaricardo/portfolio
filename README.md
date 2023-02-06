@@ -15,6 +15,7 @@ As páginas foram dividas em 3 páginas uma ao lado da outra na parte de cima e 
 Para saber mais como criar um, segue link do vídeo que utilizei para aprender a usar:
 
 [Pure CSS Scroll Snapping - Developer Filip](https://youtu.be/pNPkVQD7vlM)
+
 [GitHub do Criador - Filip Grebowski](https://github.com/FilipGrebowski)
 
 ![Organização das páginas](https://i.imgur.com/T4rtQhR.png) 
@@ -32,9 +33,11 @@ A parte do formulário de contato foi feito com Formik e Yup.
 Para o envio da mensagem direto para o email foi utilizado EmailJS.
 
 [React Formik with Yup - Onelight Web Dev](https://www.youtube.com/watch?v=7Ophfq0lEAY)
+
 [GitHub do Criador - Nikita](https://github.com/nikitapryymak)
 
 [EmailJS - Chaoo Charles](https://www.youtube.com/watch?v=bMq2riFCF90)
+
 [GitHub do Criador - Charles](https://github.com/chaoocharles)
 
 ![Contact Form](https://i.imgur.com/bSHEpkf.png) 
@@ -44,6 +47,7 @@ A página de currículo foi toda realizada com states do React. A parte do card 
 
 
 [Flipcard - Coding With Russ](https://www.youtube.com/watch?v=NCLdf661ILE)
+
 [GitHub do Criador - Russ](https://github.com/russs123)
 
 ![Curriculo](https://i.imgur.com/hA7KdMZ.png)
