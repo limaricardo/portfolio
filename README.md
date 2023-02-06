@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Porfólio - Ricardo Lima
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sobre o projeto
 
-## Available Scripts
+https://ricardo-lima.vercel.app/
 
-In the project directory, you can run:
+Esse portfólio é um projeto pessoal onde quis realizar algo diferente do que eu já tinha visto de outros, ao mesmo tempo que aprendia sempre traçando novos desafios ao longo do desenvolvimento.
 
-### `npm start`
+Colocarei abaixo o máximo de detalhes que puder sobre as páginas, créditos a algumas criações e links dos vídeos de onde tirei algumas inspirações.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Organização das páginas
 
-### `npm test`
+As páginas foram dividas em 3 páginas uma ao lado da outra na parte de cima e 3 na parte de baixo. Para isso foi utilizado Scroll Snapping (Horizontal).
+Para saber mais como criar um, segue link do vídeo que utilizei para aprender a usar:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Pure CSS Scroll Snapping - Developer Filip](https://youtu.be/pNPkVQD7vlM)
+[GitHub do Criador - Filip Grebowski](https://github.com/FilipGrebowski)
 
-### `npm run build`
+![Organização das páginas](https://i.imgur.com/T4rtQhR.png) 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Menu inicial 
+O menu de navegação junto ao efeito de hover foram retirados do vídeo abaixo. 
+As animações foram realizadas de forma padrão do CSS.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[Isometric Menu Hover - Online Tutorials](https://www.youtube.com/watch?v=MmdKeypSxE8)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Nav](https://i.imgur.com/JJzu2p1.png) 
 
-### `npm run eject`
+## Formulário de Contato   
+A parte do formulário de contato foi feito com Formik e Yup. 
+Para o envio da mensagem direto para o email foi utilizado EmailJS.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[React Formik with Yup - Onelight Web Dev](https://www.youtube.com/watch?v=7Ophfq0lEAY)
+[GitHub do Criador - Nikita](https://github.com/nikitapryymak)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[EmailJS - Chaoo Charles](https://www.youtube.com/watch?v=bMq2riFCF90)
+[GitHub do Criador - Charles](https://github.com/chaoocharles)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Contact Form](https://i.imgur.com/bSHEpkf.png) 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Currículo
+A página de currículo foi toda realizada com states do React. A parte do card com mais informações sobre o perfil deixarei um link abaixo que explica como criar um flip Card.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Flipcard - Coding With Russ](https://www.youtube.com/watch?v=NCLdf661ILE)
+[GitHub do Criador - Russ](https://github.com/russs123)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Curriculo](https://i.imgur.com/hA7KdMZ.png)
