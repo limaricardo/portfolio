@@ -15,6 +15,7 @@ As páginas foram dividas em 3 páginas uma ao lado da outra na parte de cima e 
 Para saber mais como criar um, segue link do vídeo que utilizei para aprender a usar:
 
 [Pure CSS Scroll Snapping - Developer Filip](https://youtu.be/pNPkVQD7vlM)
+<p>&nbsp;</p>
 [GitHub do Criador - Filip Grebowski](https://github.com/FilipGrebowski)
 
 ![Organização das páginas](https://i.imgur.com/T4rtQhR.png) 
