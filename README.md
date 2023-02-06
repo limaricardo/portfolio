@@ -1,4 +1,4 @@
-# Porfólio - Ricardo Lima
+# Portfólio - Ricardo Lima
 
 # Sobre o projeto
 
