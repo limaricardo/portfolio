@@ -10,6 +10,15 @@ Colocarei abaixo o máximo de detalhes que puder sobre as páginas, créditos a 
 
 ## Links e créditos
 
+### Internacionalização com i18n
+Como nesta área o Inglês é fundamental e estamos abertos a posições remotas do mundo todo, resolvi fazer a internacionalização com i18n para ter a tradução de todo o site para o Inglês. Apesar de trabalhoso é bem simples de implementar, deixarei o link abaixo do qual assisti para aprender a fazer a aplicar no projeto.
+
+[Aplicações multi idiomas - Matheus Castiglioni](https://www.youtube.com/watch?v=5p9EMWwieyo)
+
+[GitHub do Criador - Matheus Castiglioni](https://github.com/mahenrique94)
+
+![Selecione o idioma](https://i.imgur.com/IozpdWR.png)
+
 ### Organização das páginas
 
 As páginas foram dividas em 3 páginas uma ao lado da outra na parte de cima e 3 na parte de baixo. Para isso foi utilizado Scroll Snapping (Horizontal).
@@ -89,9 +98,27 @@ Depois de algumas tentativas aparecem modais, que permitem o usuário clicar em 
 
 Este foi feito de forma manual com Javascript puro, caso surja alguma dúvida em relação ao código desta página, me mande mensagem no LinkedIn para batermos um papo sobre.
 
-![Contrate-me](https://i.imgur.com/8iSs2ED.png) 
-
 <img align='right' src='./src/assets/no-gif.gif' width='200"'>
 
 
+## Layout responsivo para mobile
+
+### Menu inicial                                                                                                 
+![Menu inicial Mobile](https://i.imgur.com/irVepy1.png) 
+
+### Currículo
+![Currículo Mobile](https://i.imgur.com/9KsNJPQ.png) 
+![Currículo Mobile2](https://i.imgur.com/jX6hRKq.png) 
+
+### Redes sociais                                                                                   
+![Redes sociais Mobile](https://i.imgur.com/ORsyoUe.png) 
+
+### Projetos
+![Projetos Mobile](https://i.imgur.com/xJvL27j.png)
+
+### Formulário de Contato
+![Formulário de Contato Mobile](https://i.imgur.com/yoPJhgp.png)
+
+### Contrate-me
+![Contrate-me Mobile](https://i.imgur.com/FlaOZcS.png)
 
