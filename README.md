@@ -4,16 +4,16 @@
 
 https://ricardo-lima.vercel.app/
 
-Esse portfólio é um projeto pessoal onde quis realizar algo diferente do que eu já tinha visto de outros, ao mesmo tempo que aprendia sempre traçando novos desafios ao longo do desenvolvimento.
+Esse portfólio é um projeto pessoal onde quis realizar algo diferente do que já havia visto antes, sempre traçando novos desafios ao longo do desenvolvimento.
 
 Colocarei abaixo o máximo de detalhes que puder sobre as páginas, créditos a algumas criações e links dos vídeos de onde tirei algumas inspirações.
 
 ## Links e créditos
 
 ### Internacionalização com i18n
-Como nesta área o Inglês é fundamental e estamos abertos a posições remotas do mundo todo, resolvi fazer a internacionalização com i18n para ter a tradução de todo o site para o Inglês. Apesar de trabalhoso é bem simples de implementar, deixarei o link abaixo do qual assisti para aprender a fazer a aplicar no projeto.
+Como nesta área o Inglês é fundamental e estamos abertos a posições remotas do mundo todo, resolvi fazer a internacionalização com i18n para ter a tradução de todo o site para o Inglês. Apesar de trabalhoso é bem simples de implementar, deixarei o link abaixo do qual assisti para aprender e aplicar no projeto.
 
-[Aplicações multi idiomas - Matheus Castiglioni](https://www.youtube.com/watch?v=5p9EMWwieyo)
+[Video - Aplicações multi idiomas - Matheus Castiglioni](https://www.youtube.com/watch?v=5p9EMWwieyo)
 
 [GitHub do Criador - Matheus Castiglioni](https://github.com/mahenrique94)
 
@@ -24,7 +24,7 @@ Como nesta área o Inglês é fundamental e estamos abertos a posições remotas
 As páginas foram dividas em 3 páginas uma ao lado da outra na parte de cima e 3 na parte de baixo. Para isso foi utilizado Scroll Snapping (Horizontal).
 Para saber mais como criar um, segue link do vídeo que utilizei para aprender a usar:
 
-[Pure CSS Scroll Snapping - Developer Filip](https://youtu.be/pNPkVQD7vlM)
+[Video - Scroll Snapping - Developer Filip](https://youtu.be/pNPkVQD7vlM)
 
 [GitHub do Criador - Filip Grebowski](https://github.com/FilipGrebowski)
 
@@ -35,16 +35,16 @@ Para saber mais como criar um, segue link do vídeo que utilizei para aprender a
 O menu de navegação junto ao efeito de hover foram retirados do vídeo abaixo. 
 As animações foram realizadas de forma padrão do CSS.
 
-[Isometric Menu Hover - Online Tutorials](https://www.youtube.com/watch?v=MmdKeypSxE8)
+[Video - Isometric Menu Hover - Online Tutorials](https://www.youtube.com/watch?v=MmdKeypSxE8)
 
-![Nav](https://i.imgur.com/JJzu2p1.png) 
+![Menu Inicial](https://i.imgur.com/JJzu2p1.png) 
 
 
 ### Currículo
 A página de currículo foi toda realizada com states do React. A parte do card com mais informações sobre o perfil deixarei um link abaixo que explica como criar um flip Card.
 
 
-[Flipcard - Coding With Russ](https://www.youtube.com/watch?v=NCLdf661ILE)
+[Video - Flipcard - Coding With Russ](https://www.youtube.com/watch?v=NCLdf661ILE)
 
 [GitHub do Criador - Russ](https://github.com/russs123)
 
@@ -54,7 +54,7 @@ A página de currículo foi toda realizada com states do React. A parte do card 
 ### Redes sociais
 Em tese a página mais simples de criação, talvez seja a segunda mais demorada em relação a criatividade (ou pelo menos tentiva kkkkk). Tentei sair um pouco do padrão por aqui também, mas sem exageros. O link onde explica como fazer as animações deixarei abaixo.
 
-[CSS 3D Isometric Social Media Icon Hover Effects - Online Tutorials](https://www.youtube.com/watch?v=C8wSNZqktOM)
+[Video - CSS 3D Isometric - Online Tutorials](https://www.youtube.com/watch?v=C8wSNZqktOM)
 
 ![Projetos](https://i.imgur.com/5MDpQ94.png)
 
@@ -68,7 +68,7 @@ Recomendo que deem uma olhada tanto na documentação, assim como em alguns víd
 
 [Turning pages with CSS - Amit Sheen](https://codepen.io/amit_sheen/pen/WNweryv)
 
-[Sass Tutorial - The Net Nija](https://www.youtube.com/watch?v=_kqN4hl9bGc&list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb&index=1)
+[Video - Sass Tutorial - The Net Nija](https://www.youtube.com/watch?v=_kqN4hl9bGc&list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb&index=1)
 
 [Documentação do Sass](https://sass-lang.com/)
 
@@ -79,11 +79,11 @@ Recomendo que deem uma olhada tanto na documentação, assim como em alguns víd
 A parte do formulário de contato foi feito com Formik e Yup. 
 Para o envio da mensagem direto para o email foi utilizado EmailJS.
 
-[React Formik with Yup - Onelight Web Dev](https://www.youtube.com/watch?v=7Ophfq0lEAY)
+[Video - React Formik with Yup - Onelight Web Dev](https://www.youtube.com/watch?v=7Ophfq0lEAY)
 
 [GitHub do Criador - Nikita](https://github.com/nikitapryymak)
 
-[EmailJS - Chaoo Charles](https://www.youtube.com/watch?v=bMq2riFCF90)
+[Video - EmailJS - Chaoo Charles](https://www.youtube.com/watch?v=bMq2riFCF90)
 
 [GitHub do Criador - Charles](https://github.com/chaoocharles)
 
@@ -122,3 +122,37 @@ Este foi feito de forma manual com Javascript puro, caso surja alguma dúvida em
 ### Contrate-me
 ![Contrate-me Mobile](https://i.imgur.com/FlaOZcS.png)
 
+
+## Front end
+- HTML5
+- CSS3
+- Javascript 
+- ReactJS
+- Sass
+- i18n
+- Formik
+- Yup
+- EmailJS
+
+## Implantação em produção
+- Front end web: Vercel
+
+## Front end web
+Pré-requisitos: npm / yarn
+
+```bash
+# clonar repositório
+git clone https://github.com/limaricardo/portfolio
+
+# instalar dependências do projeto, caso necessário:
+npm install
+
+# executar o projeto
+npm start
+```
+
+# Autor
+
+Ricardo Pereira Lima
+
+https://www.linkedin.com/in/ricardo-pereira-lima/
