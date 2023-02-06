@@ -55,7 +55,7 @@ Essa parte do portfólio foi de longe a mais desafiadora. Ao analisar um exemplo
 
 Mas tudo tem seu lado bom, aprendi ferramentas do Sass que até então não tinha utilizado. Uma certa parte do código se encontrava com 3000 linhas (apenas o estilo), depois de refatorado (antes de responsividade e alguns elementos), caiu para menos de 800. 
 
-Recomendo que deem uma olhada tanto na documentação, como em alguns vídeos sobre Sass.
+Recomendo que deem uma olhada tanto na documentação, assim como em alguns vídeos sobre Sass.
 
 [Turning pages with CSS - Amit Sheen](https://codepen.io/amit_sheen/pen/WNweryv)
 
@@ -90,6 +90,7 @@ Depois de algumas tentativas aparecem modais, que permitem o usuário clicar em 
 Este foi feito de forma manual com Javascript puro, caso surja alguma dúvida em relação ao código desta página, me mande mensagem no LinkedIn para batermos um papo sobre.
 
 ![Contrate-me](https://i.imgur.com/bSHEpkf.png) 
-<img align='right' src='https://im5.ezgif.com/tmp/ezgif-5-b1a461e3df.mp4' width='200"'>
+!['Não' - Gif](https://i.imgur.com/dHnXOxb.mp4) 
+
 
 
