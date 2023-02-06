@@ -89,7 +89,7 @@ Depois de algumas tentativas aparecem modais, que permitem o usuário clicar em 
 
 Este foi feito de forma manual com Javascript puro, caso surja alguma dúvida em relação ao código desta página, me mande mensagem no LinkedIn para batermos um papo sobre.
 
-![Contrate-me](https://i.imgur.com/bSHEpkf.png) 
+![Contrate-me](https://i.imgur.com/8iSs2ED.png) 
 !['Não' - Gif](https://i.imgur.com/dHnXOxb.mp4) 
 
 
