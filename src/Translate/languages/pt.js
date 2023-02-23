@@ -30,6 +30,8 @@ const messages = {
           aboutMe3rdParag:
             "Dinâmico, boa comunicação e flexível. Procuro por desafios que me deem oportunidade de expandir meus conhecimentos e experiência em desenvolvimento Front-end com React / TypeScript.",
           professional: {
+            mostRecentH6: "Dezembro 2022 - atual",
+            mostRecentTxt: " — Desenvolvedor Front End - Mentor Voluntário",
             firstH6: "Julho 2022 - atual",
             firstTxt: " — Desenvolvedor Front-End (Wexpert Consulting)",
             secondH6: "Junho 2022 - atual",

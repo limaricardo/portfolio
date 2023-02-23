@@ -19,6 +19,18 @@ const ProfessionalExperiences = () => {
                   }`}
                 >
                   <span>
+                    <h6>{i18n.t('curriculum.messages.professional.mostRecentH6')}</h6>{i18n.t('curriculum.messages.professional.mostRecentTxt')}
+                  </span>
+                  <div className={styles.tSquare}></div>
+                </div>
+              </div>
+              <div className={`${styles.singleTimeline} ${styles.dFlex2}`}>
+                <div
+                  className={`${`${styles.timelineText} ${styles.dFlex2}`} ${
+                    styles.dFlex2
+                  }`}
+                >
+                  <span>
                     <h6>{i18n.t('curriculum.messages.professional.firstH6')}</h6>{i18n.t('curriculum.messages.professional.firstTxt')}
                   </span>
                   <div className={styles.tSquare}></div>

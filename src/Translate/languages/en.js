@@ -24,6 +24,8 @@ const messages = {
           aboutMe3rdParag:
             "Dynamic, good communication and flexible. I'm looking for challenges that give me the opportunity to expand my knowledge and experience in front-end development with React / TypeScript.",
           professional: {
+            mostRecentH6: "December 2022 - Present",
+            mostRecentTxt: " — Front-End Developer - Volunteer Mentor",
             firstH6: "July 2022 - Present",
             firstTxt: " — Front-End Developer (Wexpert Consulting)",
             secondH6: "June 2022 - Present",
