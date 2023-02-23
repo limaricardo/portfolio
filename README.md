@@ -1,4 +1,4 @@
-# Porfólio - Ricardo Lima
+# Portfólio - Ricardo Lima
 
 # Sobre o projeto
 
@@ -68,7 +68,7 @@ Recomendo que deem uma olhada tanto na documentação, assim como em alguns víd
 
 [Turning pages with CSS - Amit Sheen](https://codepen.io/amit_sheen/pen/WNweryv)
 
-[Video - Sass Tutorial - The Net Nija](https://www.youtube.com/watch?v=_kqN4hl9bGc&list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb&index=1)
+[Video - Sass Tutorial - The Net Ninja](https://www.youtube.com/watch?v=_kqN4hl9bGc&list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb&index=1)
 
 [Documentação do Sass](https://sass-lang.com/)
 
